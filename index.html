@@ -146,18 +146,32 @@
         }
         .figure-grid {
             display: grid;
-            gap: 20px;
+            gap: 16px;
             margin-bottom: 16px;
         }
         .figure-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
         .figure-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
-        .figure-item img {
-            width: 100%;
+        .figure-item {
+            cursor: pointer;
+        }
+        .figure-item .fig-frame {
+            height: 200px;
             border: 1px solid var(--border);
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 8px;
+        }
+        .figure-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
             display: block;
         }
         .figure-item figcaption {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             color: var(--text-secondary);
             font-style: italic;
             margin-top: 6px;
@@ -175,22 +189,35 @@
             border-radius: 2px;
         }
 
-        /* Full-width single figure */
-        .figure-full {
-            margin-bottom: 16px;
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 200;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
         }
-        .figure-full img {
-            width: 100%;
-            border: 1px solid var(--border);
-            display: block;
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 2px;
         }
-        .figure-full figcaption {
-            font-size: 0.78rem;
-            color: var(--text-secondary);
-            font-style: italic;
-            margin-top: 6px;
-            line-height: 1.4;
+        .lightbox-close {
+            position: absolute;
+            top: 16px; right: 24px;
+            color: rgba(255,255,255,0.7);
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none; border: none;
+            font-family: sans-serif;
         }
+        .lightbox-close:hover { color: white; }
 
         /* About */
         .about-section { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -310,16 +337,16 @@
             <span class="lang-zh hidden">我们提出了统一多源集成（UMSE）框架，通过学习注意力机制融合梯度提升树（XGBoost）与 LSTM 网络，用于短期电力需求预测。在再现北美中型电力公司统计特性的数据集上评估，所有结合用电特征的模型均实现 MAPE 低于 1%。诚实评估表明，单独的 XGBoost 优于完整集成——注意力机制将 96.3% 的权重分配给树模型分支。两种方法均将累计过度发电浪费降低约 77%，证明多源特征整合带来显著收益，即使集成架构本身未能进一步提升。</span>
         </p>
         <div class="figure-grid cols-3">
-            <figure class="figure-item">
-                <img src="figures/demand/fig01_framework.png" alt="UMSE pipeline architecture" loading="lazy">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/demand/fig01_framework.png" alt="UMSE pipeline architecture" loading="lazy"></div>
                 <figcaption>UMSE pipeline: weather, usage, and pricing features fused through attention-weighted ensemble.</figcaption>
             </figure>
-            <figure class="figure-item">
-                <img src="figures/demand/fig04_main_results.png" alt="Model comparison results" loading="lazy">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/demand/fig04_main_results.png" alt="Model comparison results" loading="lazy"></div>
                 <figcaption>Model comparison: XGBoost with usage features outperforms the full ensemble (MAPE 0.278% vs 0.324%).</figcaption>
             </figure>
-            <figure class="figure-item">
-                <img src="figures/demand/fig08_generation_waste.png" alt="Generation waste reduction" loading="lazy">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/demand/fig08_generation_waste.png" alt="Generation waste reduction" loading="lazy"></div>
                 <figcaption>Cumulative generation waste: 77% reduction versus persistence baseline.</figcaption>
             </figure>
         </div>
@@ -345,16 +372,16 @@
             <span class="lang-zh hidden">Francis 水轮机在偏离设计工况运行时会产生不同的尾水管涡带形态——部分负荷下为螺旋形、过负荷下为柱状、深度部分负荷下为双螺旋——每种形态产生具有不同周向相位分布的压力脉动。我们提出了一个分析框架，利用单向流固耦合和雨流计数损伤累积，将压力相位模式与模态相关的转轮应力和疲劳寿命估算联系起来。该框架预测了叶片不同位置的三种不同失效机制，表明状态监测必须跟踪相位内容而非仅追踪幅值，且加固方案应针对预期运行工况进行定制。</span>
         </p>
         <div class="figure-grid cols-3">
-            <figure class="figure-item">
-                <img src="figures/cavitation/fig03_vortex_ropes.png" alt="Vortex rope morphologies" loading="lazy">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/cavitation/fig03_vortex_ropes.png" alt="Vortex rope morphologies" loading="lazy"></div>
                 <figcaption>Three canonical vortex rope morphologies: helical (part-load), columnar (overload), double-helix (deep part-load).</figcaption>
             </figure>
-            <figure class="figure-item">
-                <img src="figures/cavitation/fig07_stress_contours.png" alt="Von Mises stress contours" loading="lazy">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/cavitation/fig07_stress_contours.png" alt="Von Mises stress contours" loading="lazy"></div>
                 <figcaption>Von Mises stress contours on runner blades: each morphology concentrates stress at distinct locations.</figcaption>
             </figure>
-            <figure class="figure-item">
-                <img src="figures/cavitation/fig11_causal_chain.png" alt="Causal chain flowchart" loading="lazy">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/cavitation/fig11_causal_chain.png" alt="Causal chain flowchart" loading="lazy"></div>
                 <figcaption>Complete causal chain: from vortex rope morphology through pressure modes to fatigue failure location.</figcaption>
             </figure>
         </div>
@@ -380,12 +407,12 @@
             <span class="lang-zh hidden">浮式海上风力发电机组的中等保真度水动力模型依赖固定的 Morison 系数，无法捕捉不同流动区域的非线性力变化。我们提出了一个诊断与修正框架，在每个结构构件和每个时间步评估基于物理的保真度指标——Keulegan-Carpenter 数、波陡和相对运动幅值。KC-波陡失效图量化了相对于实验标定系数的区域相关误差。应用于 DeepCwind 半潜式平台，该框架揭示了定向修正在规则波中降低纵荡，但在不规则海况下通过差频激励将响应放大高达 278%，而无条件修正则触发灾难性共振失稳。</span>
         </p>
         <div class="figure-grid cols-2">
-            <figure class="figure-item">
-                <img src="figures/fowt/fig02_failure_map.png" alt="KC-steepness failure map" loading="lazy">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/fowt/fig02_failure_map.png" alt="KC-steepness failure map" loading="lazy"></div>
                 <figcaption>KC-steepness failure map: quantifying regime-dependent Morison model error across the parameter space.</figcaption>
             </figure>
-            <figure class="figure-item">
-                <img src="figures/fowt/fig07_irregular_wave.png" alt="Irregular wave response" loading="lazy">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/fowt/fig07_irregular_wave.png" alt="Irregular wave response" loading="lazy"></div>
                 <figcaption>Irregular wave response: adaptive corrections amplify surge through difference-frequency excitation of the natural mode.</figcaption>
             </figure>
         </div>
@@ -405,8 +432,8 @@
         <h2 class="section-title"><span class="lang-en">About</span><span class="lang-zh hidden">关于</span></h2>
         <div class="about-content">
             <p>
-                <span class="lang-en">I am a PhD researcher in the Department of Engineering Science at the University of Oxford, supervised by Dr Budimir Rosic. My research sits at the intersection of computational fluid dynamics, machine learning, and structural mechanics — applied to energy systems ranging from hydropower turbines to floating offshore wind platforms and electricity grids.</span>
-                <span class="lang-zh hidden">我是牛津大学工程科学系的博士研究生，导师为 Budimir Rosic 博士。我的研究处于计算流体力学、机器学习与结构力学的交叉领域——应用于从水力发电涡轮机到浮式海上风电平台及电力系统等能源系统。</span>
+                <span class="lang-en">I am a PhD researcher in the Department of Engineering Science at the University of Oxford, supervised by Professor Budimir Rosic. My research sits at the intersection of computational fluid dynamics, machine learning, and structural mechanics — applied to energy systems ranging from hydropower turbines to floating offshore wind platforms and electricity grids.</span>
+                <span class="lang-zh hidden">我是牛津大学工程科学系的博士研究生，导师为 Budimir Rosic 教授。我的研究处于计算流体力学、机器学习与结构力学的交叉领域——应用于从水力发电涡轮机到浮式海上风电平台及电力系统等能源系统。</span>
             </p>
             <p>
                 <span class="lang-en">My work focuses on developing physics-informed computational frameworks that bridge multiple scales and fidelities: from vortex-resolved flow simulations in turbine draft tubes, to adaptive hydrodynamic load models for offshore structures, to ensemble machine learning for grid-scale demand forecasting.</span>
@@ -444,6 +471,11 @@
     <span class="lang-zh hidden">最后更新：2026 年 2 月</span>
 </footer>
 
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
 <script>
 let lang = localStorage.getItem('lang') || 'en';
 applyLang();
@@ -459,6 +491,21 @@ function applyLang() {
     document.querySelectorAll('.lang-zh').forEach(el => el.classList.toggle('hidden', lang !== 'zh'));
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
 }
+
+function openLightbox(figEl) {
+    var img = figEl.querySelector('img');
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').alt = img.alt;
+    document.getElementById('lightbox').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+});
 </script>
 
 </body>
