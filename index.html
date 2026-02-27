@@ -251,6 +251,32 @@
         .lb-prev { left: 8px; }
         .lb-next { right: 8px; }
 
+        /* Upcoming section */
+        .upcoming-section { background: var(--white); border-top: 1px solid var(--border); }
+        .upcoming-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 20px; margin-top: 8px;
+        }
+        .upcoming-card {
+            border: 1px solid var(--border); border-radius: 6px;
+            padding: 20px; background: var(--bg);
+            transition: border-color 0.2s;
+        }
+        .upcoming-card:hover { border-color: var(--oxford); }
+        .upcoming-card .journal-badge { margin-bottom: 10px; }
+        .upcoming-card h4 { font-size: 1rem; color: var(--text); margin-bottom: 8px; line-height: 1.4; }
+        .upcoming-card p { font-size: 0.83rem; color: var(--text-secondary); line-height: 1.6; }
+        .upcoming-card .card-type {
+            display: inline-block; font-size: 0.7rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            padding: 2px 8px; border-radius: 3px; margin-bottom: 10px;
+        }
+        .type-cfd { color: #065f46; background: #d1fae5; }
+        .type-ml { color: #5b21b6; background: #ede9fe; }
+        .type-review { color: #92400e; background: #fef3c7; }
+        .type-policy { color: #1e40af; background: #dbeafe; }
+        @media (max-width: 600px) { .upcoming-grid { grid-template-columns: 1fr; } }
+
         /* About */
         .about-section { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
         .about-content {
@@ -310,6 +336,7 @@
         <a href="#" class="nav-name">Jianou Jiang</a>
         <ul class="nav-links">
             <li><a href="#research"><span class="lang-en">Research</span><span class="lang-zh hidden">研究</span></a></li>
+            <li><a href="#upcoming"><span class="lang-en">Upcoming</span><span class="lang-zh hidden">即将发表</span></a></li>
             <li><a href="#about"><span class="lang-en">About</span><span class="lang-zh hidden">关于</span></a></li>
             <li><a href="#contact"><span class="lang-en">Contact</span><span class="lang-zh hidden">联系</span></a></li>
             <li><button class="lang-btn" onclick="toggleLang()"><span class="lang-en">中文</span><span class="lang-zh hidden">EN</span></button></li>
@@ -362,10 +389,10 @@
             </div>
             <div class="fig-thumbstrip">
                 <div class="fig-thumb" data-cap="Velocity deficit contours: 3x3 parametric matrix across terrain types and stability classes."><img src="figures/jweia/fig05_velocity_contours_matrix.png" alt="Velocity contour matrix"></div>
-                <div class="fig-thumb" data-cap="Farm power heatmap: terrain-stability interaction is non-additive, terrain mixing benefits stable conditions most (+6%)."><img src="figures/jweia/fig13_power_heatmap.png" alt="Power output heatmap"></div>
-                <div class="fig-thumb" data-cap="Matched-velocity analysis: hub-height wind speed dominates (2.3x), wake recovery contributes only ~7%."><img src="figures/jweia/fig16_matched_velocity.png" alt="Matched velocity analysis"></div>
+                <div class="fig-thumb" data-cap="Row-by-row power output across terrain types: mountainous terrain enhances wake mixing, producing 2-6% more power."><img src="figures/jweia/fig11_row_power_terrain.png" alt="Row power by terrain"></div>
+                <div class="fig-thumb" data-cap="Sensitivity analysis: parameter importance ranking for farm power output across the full parametric space."><img src="figures/jweia/fig17_sensitivity_analysis.png" alt="Sensitivity analysis"></div>
                 <div class="fig-thumb" data-cap="3D RANS visualization of the 3x3 wind farm wake field in OpenFOAM."><img src="figures/jweia/fig20_cfd_3d_visualization.png" alt="3D CFD wake visualization"></div>
-                <div class="fig-thumb" data-cap="Seasonal atmospheric variation produces a 40% swing in farm power, driven by friction velocity differences."><img src="figures/jweia/fig14_seasonal_variation.png" alt="Seasonal power variation"></div>
+                <div class="fig-thumb" data-cap="CFD validation under stable inflow: single-turbine wake profiles compared against RANS on a fine mesh (768k cells)."><img src="figures/jweia/fig22_cfd_stable_validation.png" alt="CFD stable validation"></div>
             </div>
         </div>
         <div class="paper-tags">
@@ -432,10 +459,10 @@
             </div>
             <div class="fig-thumbstrip">
                 <div class="fig-thumb" data-cap="Three canonical vortex rope morphologies: helical (part-load), columnar (overload), double-helix (deep part-load)."><img src="figures/cavitation/fig03_vortex_ropes.png" alt="Vortex rope morphologies"></div>
+                <div class="fig-thumb" data-cap="Pressure pulsation spectra: frequency content of vortex-rope-induced pulsations across operating conditions."><img src="figures/cavitation/fig04_pressure_spectra.png" alt="Pressure spectra"></div>
                 <div class="fig-thumb" data-cap="Circumferential pressure phase distributions: m=1 (helical), m=0 (columnar), m=2 (double-helix)."><img src="figures/cavitation/fig05_pressure_phase.png" alt="Pressure phase distributions"></div>
                 <div class="fig-thumb" data-cap="Runner modal analysis: each pressure mode selectively excites different nodal diameter structural modes."><img src="figures/cavitation/fig06_modal_analysis.png" alt="Modal analysis"></div>
                 <div class="fig-thumb" data-cap="Von Mises stress contours on runner blades: each morphology concentrates stress at distinct locations."><img src="figures/cavitation/fig07_stress_contours.png" alt="Von Mises stress contours"></div>
-                <div class="fig-thumb" data-cap="Fatigue life estimates: failure location shifts from trailing edge (part-load) to leading edge (deep part-load)."><img src="figures/cavitation/fig10_fatigue_life.png" alt="Fatigue life estimates"></div>
                 <div class="fig-thumb" data-cap="Complete causal chain: from vortex rope morphology through pressure modes to fatigue failure location."><img src="figures/cavitation/fig11_causal_chain.png" alt="Causal chain flowchart"></div>
             </div>
         </div>
@@ -470,12 +497,99 @@
                 <div class="fig-thumb" data-cap="Single-cylinder force validation: Sarpkaya coefficients vs fixed coefficients across KC regimes."><img src="figures/fowt/fig03_cylinder_forces.png" alt="Cylinder force validation"></div>
                 <div class="fig-thumb" data-cap="Free decay validation: surge, heave, and pitch damping characteristics of the DeepCwind platform."><img src="figures/fowt/fig05_free_decay.png" alt="Free decay validation"></div>
                 <div class="fig-thumb" data-cap="Regular wave response: adaptive correction reduces surge RMS by 12% via increased cross-brace drag."><img src="figures/fowt/fig06_regular_wave.png" alt="Regular wave response"></div>
-                <div class="fig-thumb" data-cap="Irregular wave response: corrections amplify surge by up to 278% through difference-frequency excitation."><img src="figures/fowt/fig07_irregular_wave.png" alt="Irregular wave response"></div>
+                <div class="fig-thumb" data-cap="Computational cost analysis: adaptive switching achieves targeted corrections at a fraction of full high-fidelity cost."><img src="figures/fowt/fig10_cost.png" alt="Computational cost analysis"></div>
             </div>
         </div>
         <div class="paper-tags">
             <span>Floating offshore wind</span><span>Hydrodynamic loads</span><span>Adaptive fidelity</span>
             <span>Keulegan-Carpenter number</span><span>Morison equation</span><span>Coupled simulation</span>
+        </div>
+    </div>
+</section>
+
+<section class="upcoming-section" id="upcoming">
+    <div class="section">
+        <h2 class="section-title"><span class="lang-en">Upcoming Research</span><span class="lang-zh hidden">即将发表的研究</span></h2>
+        <div class="upcoming-grid">
+
+            <div class="upcoming-card">
+                <span class="card-type type-cfd">CFD</span>
+                <span class="journal-badge">Solar Energy</span>
+                <h4>
+                    <span class="lang-en">Wind-Sand Transport Around Desert PV Arrays</span>
+                    <span class="lang-zh hidden">沙漠光伏阵列周围的风沙输运</span>
+                </h4>
+                <p>
+                    <span class="lang-en">CFD modeling of aeolian sand transport around large-scale photovoltaic arrays in China's desert mega-bases. Predicting sand accumulation patterns and optimizing array layout for sandstorm protection.</span>
+                    <span class="lang-zh hidden">针对中国沙戈荒大型光伏基地，开展光伏阵列周围风沙输运的CFD建模。预测积沙分布规律，优化阵列布局以防风固沙。</span>
+                </p>
+            </div>
+
+            <div class="upcoming-card">
+                <span class="card-type type-cfd">CFD</span>
+                <span class="journal-badge">Applied Energy</span>
+                <h4>
+                    <span class="lang-en">Thermal-Hydraulic Simulation of Compressed Air Energy Storage</span>
+                    <span class="lang-zh hidden">压缩空气储能系统热流体仿真</span>
+                </h4>
+                <p>
+                    <span class="lang-en">Multi-physics CFD coupling thermal energy storage dynamics with compressible air flow in underground caverns. Conjugate heat transfer in packed-bed and molten-salt systems for A-CAES optimization.</span>
+                    <span class="lang-zh hidden">多物理场CFD仿真，耦合地下洞室中热储能动力学与可压缩空气流动。针对先进压缩空气储能的填充床和熔盐系统开展共轭传热研究。</span>
+                </p>
+            </div>
+
+            <div class="upcoming-card">
+                <span class="card-type type-ml">ML</span>
+                <span class="journal-badge">Engineering Structures</span>
+                <h4>
+                    <span class="lang-en">Physics-Informed AI for Dam Safety Monitoring</span>
+                    <span class="lang-zh hidden">物理信息AI大坝安全监测</span>
+                </h4>
+                <p>
+                    <span class="lang-en">Hybrid data-mechanism-knowledge framework for intelligent dam safety risk diagnosis. Physics-informed neural networks for anomaly detection from sensor networks with automated early warning.</span>
+                    <span class="lang-zh hidden">数据-机理-知识混合驱动的智能大坝安全风险诊断框架。基于物理信息神经网络的传感器网络异常检测与自动预警。</span>
+                </p>
+            </div>
+
+            <div class="upcoming-card">
+                <span class="card-type type-review">Review</span>
+                <span class="journal-badge">Renewable & Sustainable Energy Reviews</span>
+                <h4>
+                    <span class="lang-en">Foundation Models for Clean Energy Systems</span>
+                    <span class="lang-zh hidden">面向清洁能源系统的基础大模型</span>
+                </h4>
+                <p>
+                    <span class="lang-en">Systematic review and application framework for deploying AI foundation models (LLMs, multimodal models) across hydropower, wind, solar, and ecological monitoring systems.</span>
+                    <span class="lang-zh hidden">系统综述AI基础大模型（大语言模型、多模态模型）在水电、风电、光伏及生态监测系统中的部署与应用框架。</span>
+                </p>
+            </div>
+
+            <div class="upcoming-card">
+                <span class="card-type type-policy">Policy</span>
+                <span class="journal-badge">Energy Policy</span>
+                <h4>
+                    <span class="lang-en">EU CBAM Impact on Chinese Energy Enterprises</span>
+                    <span class="lang-zh hidden">欧盟碳边境调节机制对中国能源企业的影响</span>
+                </h4>
+                <p>
+                    <span class="lang-en">Analysis of the EU Carbon Border Adjustment Mechanism — carbon cost gap quantification, EU-ETS vs China-ETS structural comparison, and strategic countermeasures for state-owned enterprises.</span>
+                    <span class="lang-zh hidden">欧盟碳边境调节机制分析——碳成本差距量化、欧盟碳市场与中国碳市场结构对比，以及国有企业的战略对策研究。</span>
+                </p>
+            </div>
+
+            <div class="upcoming-card">
+                <span class="card-type type-policy">Policy</span>
+                <span class="journal-badge">Energy Policy</span>
+                <h4>
+                    <span class="lang-en">China's Role in Global Clean Energy Transition</span>
+                    <span class="lang-zh hidden">中国在全球清洁能源转型中的角色</span>
+                </h4>
+                <p>
+                    <span class="lang-en">Quantifying China's contribution to global decarbonization through renewable capacity deployment, clean energy technology export, and green investment via Belt and Road cooperation.</span>
+                    <span class="lang-zh hidden">量化中国通过可再生能源装机部署、清洁能源技术出口及"一带一路"绿色投资对全球碳减排的贡献。</span>
+                </p>
+            </div>
+
         </div>
     </div>
 </section>
