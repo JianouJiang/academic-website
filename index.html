@@ -120,6 +120,13 @@
             border-bottom: 1px solid var(--border);
         }
         .paper-card:last-child { border-bottom: none; padding-bottom: 0; }
+        .paper-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
         .journal-badge {
             display: inline-block;
             font-size: 0.75rem;
@@ -130,7 +137,34 @@
             background: var(--tag-bg);
             padding: 3px 10px;
             border-radius: 3px;
-            margin-bottom: 12px;
+        }
+        .preprint-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #92400e;
+            background: #fef3c7;
+            padding: 3px 10px;
+            border-radius: 3px;
+        }
+        .pdf-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.78rem;
+            color: var(--oxford);
+            text-decoration: none;
+            padding: 3px 10px;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            transition: background 0.2s, border-color 0.2s;
+            margin-left: auto;
+        }
+        .pdf-link:hover {
+            background: var(--tag-bg);
+            border-color: var(--oxford);
         }
         .paper-card h3 {
             font-size: 1.2rem;
@@ -327,7 +361,11 @@
 
     <!-- Paper 1: JWEIA Wind Farm -->
     <div class="paper-card">
-        <span class="journal-badge">J. Wind Eng. Ind. Aerodyn., 2026</span>
+        <div class="paper-header">
+            <span class="journal-badge">J. Wind Eng. Ind. Aerodyn., 2026</span>
+            <span class="preprint-badge">Preprint</span>
+            <a href="papers/jweia_preview.pdf" target="_blank" class="pdf-link"><span class="lang-en">Preview PDF</span><span class="lang-zh hidden">预览 PDF</span></a>
+        </div>
         <h3>
             <span class="lang-en">Parametric Assessment of Wind Farm Performance Under Varying Terrain and Atmospheric Stability Using an Analytical Wake Model</span>
             <span class="lang-zh hidden">基于解析尾流模型的风电场性能在不同地形与大气稳定度下的参数化评估</span>
@@ -374,7 +412,11 @@
 
     <!-- Paper 2: Demand Forecasting -->
     <div class="paper-card">
-        <span class="journal-badge">Applied Energy, 2026</span>
+        <div class="paper-header">
+            <span class="journal-badge">Applied Energy, 2026</span>
+            <span class="preprint-badge">Preprint</span>
+            <a href="papers/demand_forecasting_preview.pdf" target="_blank" class="pdf-link"><span class="lang-en">Preview PDF</span><span class="lang-zh hidden">预览 PDF</span></a>
+        </div>
         <h3>
             <span class="lang-en">Machine Learning Demand Forecasting Integrating Weather, Usage Patterns, and Pricing to Reduce Utility Generation Waste</span>
             <span class="lang-zh hidden">融合天气、用电模式与电价的机器学习需求预测：降低电力系统发电浪费</span>
@@ -423,7 +465,11 @@
 
     <!-- Paper 3: Draft Tube Cavitation -->
     <div class="paper-card">
-        <span class="journal-badge">Renewable Energy, 2026</span>
+        <div class="paper-header">
+            <span class="journal-badge">Renewable Energy, 2026</span>
+            <span class="preprint-badge">Preprint</span>
+            <a href="papers/cavitation_preview.pdf" target="_blank" class="pdf-link"><span class="lang-en">Preview PDF</span><span class="lang-zh hidden">预览 PDF</span></a>
+        </div>
         <h3>
             <span class="lang-en">Vortex Rope Morphology Controls Runner Fatigue Failure Mode: An Analytical Framework Linking Draft Tube Flow Physics to Blade Life Prediction in Francis Turbines</span>
             <span class="lang-zh hidden">涡带形态决定转轮疲劳失效模式：连接尾水管流场物理与 Francis 水轮机叶片寿命预测的分析框架</span>
@@ -472,7 +518,11 @@
 
     <!-- Paper 4: FOWT Hydrodynamics -->
     <div class="paper-card">
-        <span class="journal-badge">Ocean Engineering, 2026</span>
+        <div class="paper-header">
+            <span class="journal-badge">Ocean Engineering, 2026</span>
+            <span class="preprint-badge">Preprint</span>
+            <a href="papers/fowt_preview.pdf" target="_blank" class="pdf-link"><span class="lang-en">Preview PDF</span><span class="lang-zh hidden">预览 PDF</span></a>
+        </div>
         <h3>
             <span class="lang-en">Adaptive-Fidelity Hydrodynamic Load Calculation for Floating Offshore Wind Turbines: A Physics-Based Switching Framework</span>
             <span class="lang-zh hidden">浮式海上风力发电机组自适应保真度水动力荷载计算：基于物理的切换框架</span>
