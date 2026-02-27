@@ -51,278 +51,255 @@
             font-size: 1.1rem;
             color: var(--oxford);
             text-decoration: none;
-            letter-spacing: -0.3px;
         }
         .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
-        .nav-links a {
-            text-decoration: none; color: var(--text-secondary); font-size: 0.85rem;
-            transition: color 0.2s;
-        }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.85rem; transition: color 0.2s; }
         .nav-links a:hover { color: var(--oxford); }
         .lang-btn {
-            background: var(--oxford);
-            border: none; color: white;
-            padding: 4px 12px; border-radius: 3px;
-            cursor: pointer; font-size: 0.8rem;
+            background: var(--oxford); border: none; color: white;
+            padding: 4px 12px; border-radius: 3px; cursor: pointer; font-size: 0.8rem;
             transition: background 0.2s;
         }
         .lang-btn:hover { background: var(--oxford-light); }
 
-        /* Hero */
+        /* Hero with canvas */
         .hero {
+            position: relative;
             padding: 120px 24px 60px;
             text-align: center;
-            border-bottom: 1px solid var(--border);
-            background: var(--white);
+            overflow: hidden;
+            min-height: 340px;
+        }
+        #hero-canvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(6,16,32,0.55) 0%, rgba(6,16,32,0.35) 70%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
         .hero h1 {
             font-size: 2rem;
-            color: var(--oxford);
+            color: #fff;
             margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.4);
         }
         .hero .subtitle {
             font-size: 1rem;
-            color: var(--text-secondary);
+            color: rgba(255,255,255,0.85);
             margin-bottom: 6px;
         }
         .hero .affiliation {
             font-size: 0.9rem;
-            color: var(--text-secondary);
+            color: rgba(255,255,255,0.75);
         }
         .hero .summary {
             max-width: 640px;
             margin: 20px auto 0;
             font-size: 0.95rem;
-            color: var(--text-secondary);
+            color: rgba(255,255,255,0.8);
             line-height: 1.6;
         }
 
         /* Sections */
-        .section {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 24px;
-        }
+        .section { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
         .section-title {
-            font-size: 1.5rem;
-            color: var(--oxford);
-            margin-bottom: 32px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--oxford);
-            display: inline-block;
+            font-size: 1.5rem; color: var(--oxford);
+            margin-bottom: 32px; padding-bottom: 8px;
+            border-bottom: 2px solid var(--oxford); display: inline-block;
         }
 
         /* Paper cards */
         .paper-card {
-            margin-bottom: 48px;
-            padding-bottom: 48px;
+            margin-bottom: 48px; padding-bottom: 48px;
             border-bottom: 1px solid var(--border);
         }
         .paper-card:last-child { border-bottom: none; padding-bottom: 0; }
         .paper-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
+            display: flex; align-items: center; gap: 8px;
+            margin-bottom: 12px; flex-wrap: wrap;
         }
         .journal-badge {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--oxford);
-            background: var(--tag-bg);
-            padding: 3px 10px;
-            border-radius: 3px;
+            display: inline-block; font-size: 0.75rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            color: var(--oxford); background: var(--tag-bg);
+            padding: 3px 10px; border-radius: 3px;
         }
         .preprint-badge {
-            display: inline-block;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #92400e;
-            background: #fef3c7;
-            padding: 3px 10px;
-            border-radius: 3px;
+            display: inline-block; font-size: 0.7rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            color: #92400e; background: #fef3c7;
+            padding: 3px 10px; border-radius: 3px;
         }
         .pdf-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 0.78rem;
-            color: var(--oxford);
-            text-decoration: none;
-            padding: 3px 10px;
-            border: 1px solid var(--border);
-            border-radius: 3px;
-            transition: background 0.2s, border-color 0.2s;
-            margin-left: auto;
+            display: inline-flex; align-items: center; gap: 4px;
+            font-size: 0.78rem; color: var(--oxford); text-decoration: none;
+            padding: 3px 10px; border: 1px solid var(--border); border-radius: 3px;
+            transition: background 0.2s, border-color 0.2s; margin-left: auto;
         }
-        .pdf-link:hover {
-            background: var(--tag-bg);
-            border-color: var(--oxford);
-        }
+        .pdf-link:hover { background: var(--tag-bg); border-color: var(--oxford); }
         .paper-card h3 {
-            font-size: 1.2rem;
-            color: var(--text);
-            margin-bottom: 12px;
-            line-height: 1.4;
+            font-size: 1.2rem; color: var(--text);
+            margin-bottom: 12px; line-height: 1.4;
         }
         .paper-summary {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-        .figure-grid {
-            display: grid;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-        .figure-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-        .figure-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
-        .figure-item {
-            cursor: pointer;
-        }
-        .figure-item .fig-frame {
-            height: 200px;
-            border: 1px solid var(--border);
-            background: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            padding: 8px;
-        }
-        .figure-item img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            display: block;
-        }
-        .figure-item figcaption {
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            font-style: italic;
-            margin-top: 6px;
-            line-height: 1.4;
-        }
-        .paper-tags {
-            display: flex; flex-wrap: wrap; gap: 6px;
-            margin-top: 16px;
-        }
-        .paper-tags span {
-            font-size: 0.72rem;
-            color: var(--tag-text);
-            background: var(--tag-bg);
-            padding: 2px 8px;
-            border-radius: 2px;
+            font-size: 0.92rem; color: var(--text-secondary);
+            line-height: 1.7; margin-bottom: 20px;
         }
 
-        /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.85);
-            z-index: 200;
+        /* Figure gallery: big main + sidebar thumbnails */
+        .fig-gallery {
+            display: grid;
+            grid-template-columns: 1fr 130px;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .fig-main-wrap {
             cursor: pointer;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
+        }
+        .fig-main-frame {
+            height: 300px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; padding: 10px;
+            transition: border-color 0.2s;
+        }
+        .fig-main-frame:hover { border-color: var(--oxford); }
+        .fig-main-frame img {
+            max-width: 100%; max-height: 100%;
+            object-fit: contain; display: block;
+        }
+        .fig-main-cap {
+            font-size: 0.75rem; color: var(--text-secondary);
+            font-style: italic; margin-top: 6px; line-height: 1.4;
+        }
+        .fig-thumbstrip {
+            display: flex; flex-direction: column; gap: 6px;
+            max-height: 300px; overflow-y: auto;
+        }
+        .fig-thumb {
+            flex-shrink: 0;
+            height: 54px;
+            border: 2px solid transparent;
+            background: var(--white);
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; padding: 3px;
+            cursor: pointer; transition: border-color 0.2s;
+            border-radius: 2px;
+        }
+        .fig-thumb:hover { border-color: #aaa; }
+        .fig-thumb.active { border-color: var(--oxford); }
+        .fig-thumb img {
+            max-width: 100%; max-height: 100%;
+            object-fit: contain; display: block;
+        }
+
+        .paper-tags {
+            display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px;
+        }
+        .paper-tags span {
+            font-size: 0.72rem; color: var(--tag-text);
+            background: var(--tag-bg); padding: 2px 8px; border-radius: 2px;
+        }
+
+        /* Lightbox with navigation */
+        .lightbox {
+            display: none; position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 200;
+            flex-direction: column;
+            align-items: center; justify-content: center;
+            padding: 60px 80px 40px;
         }
         .lightbox.active { display: flex; }
         .lightbox img {
-            max-width: 90vw;
-            max-height: 90vh;
+            max-width: 100%; max-height: 75vh;
             object-fit: contain;
-            border-radius: 2px;
         }
-        .lightbox-close {
-            position: absolute;
-            top: 16px; right: 24px;
-            color: rgba(255,255,255,0.7);
-            font-size: 1.5rem;
-            cursor: pointer;
-            background: none; border: none;
-            font-family: sans-serif;
+        .lb-caption {
+            color: rgba(255,255,255,0.7); font-size: 0.85rem;
+            font-style: italic; margin-top: 12px;
+            text-align: center; max-width: 700px;
         }
-        .lightbox-close:hover { color: white; }
+        .lb-counter {
+            color: rgba(255,255,255,0.4); font-size: 0.78rem;
+            margin-top: 8px;
+        }
+        .lb-close {
+            position: absolute; top: 16px; right: 24px;
+            color: rgba(255,255,255,0.6); font-size: 2rem;
+            cursor: pointer; background: none; border: none;
+            font-family: sans-serif; transition: color 0.2s;
+        }
+        .lb-close:hover { color: #fff; }
+        .lb-arrow {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            color: rgba(255,255,255,0.5); font-size: 3rem;
+            cursor: pointer; background: none; border: none;
+            font-family: sans-serif; padding: 20px;
+            transition: color 0.2s; user-select: none;
+        }
+        .lb-arrow:hover { color: #fff; }
+        .lb-prev { left: 8px; }
+        .lb-next { right: 8px; }
 
         /* About */
         .about-section { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
         .about-content {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            max-width: 700px;
+            font-size: 0.92rem; color: var(--text-secondary);
+            line-height: 1.7; max-width: 700px;
         }
         .about-content p { margin-bottom: 12px; }
-        .skill-tags {
-            display: flex; flex-wrap: wrap; gap: 8px;
-            margin-top: 20px;
-        }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
         .skill-tags span {
-            font-size: 0.78rem;
-            color: var(--oxford);
-            background: var(--tag-bg);
-            padding: 4px 10px;
-            border-radius: 3px;
-            border: 1px solid #d0d8e4;
+            font-size: 0.78rem; color: var(--oxford);
+            background: var(--tag-bg); padding: 4px 10px;
+            border-radius: 3px; border: 1px solid #d0d8e4;
         }
 
         /* Contact */
-        .contact-section {
-            background: var(--oxford);
-            color: white;
-            padding: 48px 24px;
-        }
-        .contact-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .contact-inner h2 {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 16px;
-        }
-        .contact-inner p {
-            color: rgba(255,255,255,0.75);
-            font-size: 0.9rem;
-            margin-bottom: 6px;
-        }
+        .contact-section { background: var(--oxford); color: white; padding: 48px 24px; }
+        .contact-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+        .contact-inner h2 { color: white; font-size: 1.3rem; margin-bottom: 16px; }
+        .contact-inner p { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 6px; }
         .contact-inner a {
-            color: rgba(255,255,255,0.9);
-            text-decoration: none;
+            color: rgba(255,255,255,0.9); text-decoration: none;
             border-bottom: 1px solid rgba(255,255,255,0.3);
         }
         .contact-inner a:hover { border-bottom-color: rgba(255,255,255,0.7); }
-        .contact-links {
-            display: flex; gap: 24px; justify-content: center;
-            margin-top: 16px;
-        }
+        .contact-links { display: flex; gap: 24px; justify-content: center; margin-top: 16px; }
 
-        /* Footer */
         footer {
-            text-align: center;
-            padding: 24px;
-            font-size: 0.78rem;
-            color: var(--text-secondary);
+            text-align: center; padding: 24px;
+            font-size: 0.78rem; color: var(--text-secondary);
             border-top: 1px solid var(--border);
         }
 
         @media (max-width: 640px) {
-            .figure-grid.cols-3, .figure-grid.cols-2 { grid-template-columns: 1fr; }
+            .fig-gallery { grid-template-columns: 1fr; }
+            .fig-thumbstrip {
+                flex-direction: row; max-height: none;
+                overflow-x: auto; overflow-y: hidden;
+            }
+            .fig-thumb { height: 48px; min-width: 70px; }
+            .fig-main-frame { height: 220px; }
             .nav-links { gap: 12px; }
             .nav-links a { font-size: 0.8rem; }
             .hero h1 { font-size: 1.6rem; }
             .section { padding: 40px 16px; }
             .contact-links { flex-direction: column; gap: 8px; }
+            .lightbox { padding: 60px 16px 30px; }
+            .lb-arrow { font-size: 2rem; padding: 10px; }
+            .lb-prev { left: 0; }
+            .lb-next { right: 0; }
         }
     </style>
 </head>
@@ -341,19 +318,23 @@
 </nav>
 
 <section class="hero">
-    <h1>Jianou Jiang <span style="font-weight:300;">·</span> 姜剑欧</h1>
-    <p class="subtitle">
-        <span class="lang-en">PhD Researcher, Department of Engineering Science</span>
-        <span class="lang-zh hidden">博士研究生，工程科学系</span>
-    </p>
-    <p class="affiliation">
-        <span class="lang-en">University of Oxford</span>
-        <span class="lang-zh hidden">牛津大学</span>
-    </p>
-    <p class="summary">
-        <span class="lang-en">I develop computational and machine learning methods for energy systems — from wind farm wake modelling and electricity demand forecasting to turbine structural integrity and floating offshore wind hydrodynamics.</span>
-        <span class="lang-zh hidden">我为能源系统开发计算与机器学习方法——涵盖风电场尾流建模、电力需求预测、水轮机结构完整性及浮式海上风电水动力学。</span>
-    </p>
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Jianou Jiang <span style="font-weight:300;">·</span> 姜剑欧</h1>
+        <p class="subtitle">
+            <span class="lang-en">PhD Researcher, Department of Engineering Science</span>
+            <span class="lang-zh hidden">博士研究生，工程科学系</span>
+        </p>
+        <p class="affiliation">
+            <span class="lang-en">University of Oxford</span>
+            <span class="lang-zh hidden">牛津大学</span>
+        </p>
+        <p class="summary">
+            <span class="lang-en">I develop computational and machine learning methods for energy systems — from wind farm wake modelling and electricity demand forecasting to turbine structural integrity and floating offshore wind hydrodynamics.</span>
+            <span class="lang-zh hidden">我为能源系统开发计算与机器学习方法——涵盖风电场尾流建模、电力需求预测、水轮机结构完整性及浮式海上风电水动力学。</span>
+        </p>
+    </div>
 </section>
 
 <section class="section" id="research">
@@ -374,39 +355,23 @@
             <span class="lang-en">Stability-driven differences in wind farm power are commonly attributed to wake recovery rates, but the relative contributions of hub-height wind speed and wake dynamics are rarely separated. We present a matched-velocity analysis showing that when hub-height wind speed is held constant, the residual stability effect on wake recovery accounts for only ~7% variation in farm power — while total power variation exceeds a factor of 2.3 when each condition uses its Monin-Obukhov prescribed wind speed. The framework uses the Bastankhah-Porté-Agel Gaussian wake model with stability- and terrain-dependent corrections, applied to a 3x3 NREL 5 MW farm across three terrain types and three stability classes. RANS validation in OpenFOAM confirms farm-level power agreement within 5.2%.</span>
             <span class="lang-zh hidden">风电场功率的稳定度差异通常归因于尾流恢复速率，但轮毂高度风速与尾流动力学的相对贡献很少被分离。我们提出了匹配风速分析，表明当轮毂高度风速保持恒定时，稳定度对尾流恢复的残余效应仅占约 7% 的功率变化——而当各工况使用其 Monin-Obukhov 规定风速时，总功率变化超过 2.3 倍。该框架使用 Bastankhah-Porté-Agel 高斯尾流模型结合稳定度和地形修正，应用于三种地形和三种稳定度等级下的 3x3 NREL 5 MW 风场。OpenFOAM RANS 验证确认风场级功率一致性在 5.2% 以内。</span>
         </p>
-        <div class="figure-grid cols-3">
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/jweia/fig05_velocity_contours_matrix.png" alt="Velocity contour matrix" loading="lazy"></div>
-                <figcaption>Velocity deficit contours: 3x3 parametric matrix across terrain types (rows) and stability classes (columns).</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/jweia/fig13_power_heatmap.png" alt="Power output heatmap" loading="lazy"></div>
-                <figcaption>Farm power heatmap: terrain-stability interaction is non-additive, with terrain mixing benefiting stable conditions most (+6%).</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/jweia/fig16_matched_velocity.png" alt="Matched velocity analysis" loading="lazy"></div>
-                <figcaption>Matched-velocity analysis: hub-height wind speed dominates (2.3x), wake recovery contributes only ~7%.</figcaption>
-            </figure>
-        </div>
-        <div class="figure-grid cols-2">
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/jweia/fig20_cfd_3d_visualization.png" alt="3D CFD wake visualization" loading="lazy"></div>
-                <figcaption>3D RANS visualization of the 3x3 wind farm wake field in OpenFOAM.</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/jweia/fig14_seasonal_variation.png" alt="Seasonal power variation" loading="lazy"></div>
-                <figcaption>Seasonal atmospheric variation produces a 40% swing in farm power, driven by friction velocity differences.</figcaption>
-            </figure>
+        <div class="fig-gallery">
+            <div class="fig-main-wrap">
+                <div class="fig-main-frame"><img class="fig-main-img" src="" alt=""></div>
+                <figcaption class="fig-main-cap"></figcaption>
+            </div>
+            <div class="fig-thumbstrip">
+                <div class="fig-thumb" data-cap="Velocity deficit contours: 3x3 parametric matrix across terrain types and stability classes."><img src="figures/jweia/fig05_velocity_contours_matrix.png" alt="Velocity contour matrix"></div>
+                <div class="fig-thumb" data-cap="Farm power heatmap: terrain-stability interaction is non-additive, terrain mixing benefits stable conditions most (+6%)."><img src="figures/jweia/fig13_power_heatmap.png" alt="Power output heatmap"></div>
+                <div class="fig-thumb" data-cap="Matched-velocity analysis: hub-height wind speed dominates (2.3x), wake recovery contributes only ~7%."><img src="figures/jweia/fig16_matched_velocity.png" alt="Matched velocity analysis"></div>
+                <div class="fig-thumb" data-cap="3D RANS visualization of the 3x3 wind farm wake field in OpenFOAM."><img src="figures/jweia/fig20_cfd_3d_visualization.png" alt="3D CFD wake visualization"></div>
+                <div class="fig-thumb" data-cap="Seasonal atmospheric variation produces a 40% swing in farm power, driven by friction velocity differences."><img src="figures/jweia/fig14_seasonal_variation.png" alt="Seasonal power variation"></div>
+            </div>
         </div>
         <div class="paper-tags">
-            <span>Wind farm</span>
-            <span>Analytical wake model</span>
-            <span>Atmospheric stability</span>
-            <span>Terrain effects</span>
-            <span>Gaussian wake</span>
-            <span>Monin-Obukhov similarity</span>
-            <span>OpenFOAM</span>
-            <span>RANS validation</span>
+            <span>Wind farm</span><span>Analytical wake model</span><span>Atmospheric stability</span>
+            <span>Terrain effects</span><span>Gaussian wake</span><span>Monin-Obukhov similarity</span>
+            <span>OpenFOAM</span><span>RANS validation</span>
         </div>
     </div>
 
@@ -422,44 +387,26 @@
             <span class="lang-zh hidden">融合天气、用电模式与电价的机器学习需求预测：降低电力系统发电浪费</span>
         </h3>
         <p class="paper-summary">
-            <span class="lang-en">We propose the Unified Multi-Source Ensemble (UMSE) framework, which fuses gradient-boosted trees (XGBoost) and LSTM networks through a learned attention mechanism to forecast short-term electricity demand. Evaluated on a dataset reproducing the statistical properties of a mid-sized North American utility, all models incorporating usage features achieve MAPE below 1%. An honest evaluation reveals that XGBoost alone outperforms the full ensemble — the attention mechanism assigns 96.3% weight to the tree branch. Both approaches reduce cumulative over-generation waste by approximately 77% relative to persistence baseline, demonstrating that multi-source feature integration yields substantial gains, even when the ensemble architecture does not.</span>
-            <span class="lang-zh hidden">我们提出了统一多源集成（UMSE）框架，通过学习注意力机制融合梯度提升树（XGBoost）与 LSTM 网络，用于短期电力需求预测。在再现北美中型电力公司统计特性的数据集上评估，所有结合用电特征的模型均实现 MAPE 低于 1%。诚实评估表明，单独的 XGBoost 优于完整集成——注意力机制将 96.3% 的权重分配给树模型分支。两种方法均将累计过度发电浪费降低约 77%，证明多源特征整合带来显著收益，即使集成架构本身未能进一步提升。</span>
+            <span class="lang-en">We propose the Unified Multi-Source Ensemble (UMSE) framework, which fuses gradient-boosted trees (XGBoost) and LSTM networks through a learned attention mechanism to forecast short-term electricity demand. Evaluated on a dataset reproducing the statistical properties of a mid-sized North American utility, all models incorporating usage features achieve MAPE below 1%. An honest evaluation reveals that XGBoost alone outperforms the full ensemble — the attention mechanism assigns 96.3% weight to the tree branch. Both approaches reduce cumulative over-generation waste by approximately 77% relative to persistence baseline.</span>
+            <span class="lang-zh hidden">我们提出了统一多源集成（UMSE）框架，通过学习注意力机制融合梯度提升树（XGBoost）与 LSTM 网络，用于短期电力需求预测。在再现北美中型电力公司统计特性的数据集上评估，所有结合用电特征的模型均实现 MAPE 低于 1%。诚实评估表明，单独的 XGBoost 优于完整集成——注意力机制将 96.3% 的权重分配给树模型分支。两种方法均将累计过度发电浪费降低约 77%。</span>
         </p>
-        <div class="figure-grid cols-3">
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/demand/fig01_framework.png" alt="UMSE pipeline architecture" loading="lazy"></div>
-                <figcaption>UMSE pipeline: weather, usage, and pricing features fused through attention-weighted ensemble.</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/demand/fig03_data_overview.png" alt="Dataset overview" loading="lazy"></div>
-                <figcaption>Dataset overview: two years of hourly demand, weather, and pricing data with seasonal patterns.</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/demand/fig04_main_results.png" alt="Model comparison results" loading="lazy"></div>
-                <figcaption>Model comparison: XGBoost with usage features outperforms the full ensemble (MAPE 0.278% vs 0.324%).</figcaption>
-            </figure>
-        </div>
-        <div class="figure-grid cols-3">
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/demand/fig05_seasonal_performance.png" alt="Seasonal performance" loading="lazy"></div>
-                <figcaption>Seasonal performance breakdown: model accuracy varies with temperature-driven demand patterns.</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/demand/fig07_attention_weights.png" alt="Attention weights" loading="lazy"></div>
-                <figcaption>Attention weights: 96.3% average weight to the XGBoost branch, indicating minimal LSTM contribution.</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/demand/fig08_generation_waste.png" alt="Generation waste reduction" loading="lazy"></div>
-                <figcaption>Cumulative generation waste: 77% reduction versus persistence baseline.</figcaption>
-            </figure>
+        <div class="fig-gallery">
+            <div class="fig-main-wrap">
+                <div class="fig-main-frame"><img class="fig-main-img" src="" alt=""></div>
+                <figcaption class="fig-main-cap"></figcaption>
+            </div>
+            <div class="fig-thumbstrip">
+                <div class="fig-thumb" data-cap="UMSE pipeline: weather, usage, and pricing features fused through attention-weighted ensemble."><img src="figures/demand/fig01_framework.png" alt="UMSE pipeline architecture"></div>
+                <div class="fig-thumb" data-cap="Dataset overview: two years of hourly demand, weather, and pricing data with seasonal patterns."><img src="figures/demand/fig03_data_overview.png" alt="Dataset overview"></div>
+                <div class="fig-thumb" data-cap="Model comparison: XGBoost with usage features outperforms the full ensemble (MAPE 0.278% vs 0.324%)."><img src="figures/demand/fig04_main_results.png" alt="Model comparison results"></div>
+                <div class="fig-thumb" data-cap="Seasonal performance breakdown: model accuracy varies with temperature-driven demand patterns."><img src="figures/demand/fig05_seasonal_performance.png" alt="Seasonal performance"></div>
+                <div class="fig-thumb" data-cap="Attention weights: 96.3% average weight to the XGBoost branch, indicating minimal LSTM contribution."><img src="figures/demand/fig07_attention_weights.png" alt="Attention weights"></div>
+                <div class="fig-thumb" data-cap="Cumulative generation waste: 77% reduction versus persistence baseline."><img src="figures/demand/fig08_generation_waste.png" alt="Generation waste reduction"></div>
+            </div>
         </div>
         <div class="paper-tags">
-            <span>Electricity demand forecasting</span>
-            <span>Machine learning</span>
-            <span>XGBoost</span>
-            <span>LSTM</span>
-            <span>Attention mechanism</span>
-            <span>Generation waste</span>
+            <span>Electricity demand forecasting</span><span>Machine learning</span><span>XGBoost</span>
+            <span>LSTM</span><span>Attention mechanism</span><span>Generation waste</span>
         </div>
     </div>
 
@@ -475,44 +422,26 @@
             <span class="lang-zh hidden">涡带形态决定转轮疲劳失效模式：连接尾水管流场物理与 Francis 水轮机叶片寿命预测的分析框架</span>
         </h3>
         <p class="paper-summary">
-            <span class="lang-en">Francis turbines operating off-design develop distinct draft-tube vortex rope morphologies — helical at part-load, columnar at overload, and double-helix at deep part-load — each generating pressure pulsations with different circumferential phase distributions. We present an analytical framework that links these pressure phase patterns to mode-dependent runner stress and fatigue-life estimates using one-way FSI and rain-flow damage accumulation. The framework predicts three distinct failure mechanisms at different blade locations, implying that condition monitoring must track phase content, not only amplitude, and that reinforcement should be tailored to the expected operating profile.</span>
-            <span class="lang-zh hidden">Francis 水轮机在偏离设计工况运行时会产生不同的尾水管涡带形态——部分负荷下为螺旋形、过负荷下为柱状、深度部分负荷下为双螺旋——每种形态产生具有不同周向相位分布的压力脉动。我们提出了一个分析框架，利用单向流固耦合和雨流计数损伤累积，将压力相位模式与模态相关的转轮应力和疲劳寿命估算联系起来。该框架预测了叶片不同位置的三种不同失效机制，表明状态监测必须跟踪相位内容而非仅追踪幅值，且加固方案应针对预期运行工况进行定制。</span>
+            <span class="lang-en">Francis turbines operating off-design develop distinct draft-tube vortex rope morphologies — helical at part-load, columnar at overload, and double-helix at deep part-load — each generating pressure pulsations with different circumferential phase distributions. We present an analytical framework that links these pressure phase patterns to mode-dependent runner stress and fatigue-life estimates using one-way FSI and rain-flow damage accumulation. The framework predicts three distinct failure mechanisms at different blade locations.</span>
+            <span class="lang-zh hidden">Francis 水轮机在偏离设计工况运行时会产生不同的尾水管涡带形态——部分负荷下为螺旋形、过负荷下为柱状、深度部分负荷下为双螺旋——每种形态产生具有不同周向相位分布的压力脉动。我们提出了一个分析框架，利用单向流固耦合和雨流计数损伤累积，将压力相位模式与模态相关的转轮应力和疲劳寿命估算联系起来。该框架预测了叶片不同位置的三种不同失效机制。</span>
         </p>
-        <div class="figure-grid cols-3">
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/cavitation/fig03_vortex_ropes.png" alt="Vortex rope morphologies" loading="lazy"></div>
-                <figcaption>Three canonical vortex rope morphologies: helical (part-load), columnar (overload), double-helix (deep part-load).</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/cavitation/fig05_pressure_phase.png" alt="Pressure phase distributions" loading="lazy"></div>
-                <figcaption>Circumferential pressure phase distributions: m=1 (helical), m=0 (columnar), m=2 (double-helix).</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/cavitation/fig06_modal_analysis.png" alt="Modal analysis" loading="lazy"></div>
-                <figcaption>Runner modal analysis: each pressure mode selectively excites different nodal diameter structural modes.</figcaption>
-            </figure>
-        </div>
-        <div class="figure-grid cols-3">
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/cavitation/fig07_stress_contours.png" alt="Von Mises stress contours" loading="lazy"></div>
-                <figcaption>Von Mises stress contours on runner blades: each morphology concentrates stress at distinct locations.</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/cavitation/fig10_fatigue_life.png" alt="Fatigue life estimates" loading="lazy"></div>
-                <figcaption>Fatigue life estimates: failure location shifts from trailing edge (part-load) to leading edge (deep part-load).</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/cavitation/fig11_causal_chain.png" alt="Causal chain flowchart" loading="lazy"></div>
-                <figcaption>Complete causal chain: from vortex rope morphology through pressure modes to fatigue failure location.</figcaption>
-            </figure>
+        <div class="fig-gallery">
+            <div class="fig-main-wrap">
+                <div class="fig-main-frame"><img class="fig-main-img" src="" alt=""></div>
+                <figcaption class="fig-main-cap"></figcaption>
+            </div>
+            <div class="fig-thumbstrip">
+                <div class="fig-thumb" data-cap="Three canonical vortex rope morphologies: helical (part-load), columnar (overload), double-helix (deep part-load)."><img src="figures/cavitation/fig03_vortex_ropes.png" alt="Vortex rope morphologies"></div>
+                <div class="fig-thumb" data-cap="Circumferential pressure phase distributions: m=1 (helical), m=0 (columnar), m=2 (double-helix)."><img src="figures/cavitation/fig05_pressure_phase.png" alt="Pressure phase distributions"></div>
+                <div class="fig-thumb" data-cap="Runner modal analysis: each pressure mode selectively excites different nodal diameter structural modes."><img src="figures/cavitation/fig06_modal_analysis.png" alt="Modal analysis"></div>
+                <div class="fig-thumb" data-cap="Von Mises stress contours on runner blades: each morphology concentrates stress at distinct locations."><img src="figures/cavitation/fig07_stress_contours.png" alt="Von Mises stress contours"></div>
+                <div class="fig-thumb" data-cap="Fatigue life estimates: failure location shifts from trailing edge (part-load) to leading edge (deep part-load)."><img src="figures/cavitation/fig10_fatigue_life.png" alt="Fatigue life estimates"></div>
+                <div class="fig-thumb" data-cap="Complete causal chain: from vortex rope morphology through pressure modes to fatigue failure location."><img src="figures/cavitation/fig11_causal_chain.png" alt="Causal chain flowchart"></div>
+            </div>
         </div>
         <div class="paper-tags">
-            <span>Francis turbine</span>
-            <span>Vortex rope</span>
-            <span>Draft tube cavitation</span>
-            <span>Fluid-structure interaction</span>
-            <span>Fatigue life</span>
-            <span>Pressure pulsation</span>
+            <span>Francis turbine</span><span>Vortex rope</span><span>Draft tube cavitation</span>
+            <span>Fluid-structure interaction</span><span>Fatigue life</span><span>Pressure pulsation</span>
         </div>
     </div>
 
@@ -528,40 +457,25 @@
             <span class="lang-zh hidden">浮式海上风力发电机组自适应保真度水动力荷载计算：基于物理的切换框架</span>
         </h3>
         <p class="paper-summary">
-            <span class="lang-en">Mid-fidelity hydrodynamic models for floating offshore wind turbines rely on fixed Morison coefficients that do not capture nonlinear force variation across flow regimes. We present a diagnostic and correction framework that evaluates physics-based fidelity indicators — the Keulegan-Carpenter number, wave steepness, and relative motion amplitude — at each structural member and time step. A KC-steepness failure map quantifies regime-dependent error against experimentally-calibrated coefficients. Applied to the DeepCwind semi-submersible, the framework reveals that targeted corrections reduce surge in regular waves but amplify response by up to 278% in irregular seas through difference-frequency excitation, while unconditional correction triggers catastrophic resonant instability.</span>
-            <span class="lang-zh hidden">浮式海上风力发电机组的中等保真度水动力模型依赖固定的 Morison 系数，无法捕捉不同流动区域的非线性力变化。我们提出了一个诊断与修正框架，在每个结构构件和每个时间步评估基于物理的保真度指标——Keulegan-Carpenter 数、波陡和相对运动幅值。KC-波陡失效图量化了相对于实验标定系数的区域相关误差。应用于 DeepCwind 半潜式平台，该框架揭示了定向修正在规则波中降低纵荡，但在不规则海况下通过差频激励将响应放大高达 278%，而无条件修正则触发灾难性共振失稳。</span>
+            <span class="lang-en">Mid-fidelity hydrodynamic models for floating offshore wind turbines rely on fixed Morison coefficients that do not capture nonlinear force variation across flow regimes. We present a diagnostic and correction framework that evaluates physics-based fidelity indicators — the Keulegan-Carpenter number, wave steepness, and relative motion amplitude — at each structural member and time step. Applied to the DeepCwind semi-submersible, the framework reveals that targeted corrections reduce surge in regular waves but amplify response by up to 278% in irregular seas, while unconditional correction triggers catastrophic resonant instability.</span>
+            <span class="lang-zh hidden">浮式海上风力发电机组的中等保真度水动力模型依赖固定的 Morison 系数，无法捕捉不同流动区域的非线性力变化。我们提出了一个诊断与修正框架，在每个结构构件和每个时间步评估基于物理的保真度指标——Keulegan-Carpenter 数、波陡和相对运动幅值。应用于 DeepCwind 半潜式平台，该框架揭示了定向修正在规则波中降低纵荡，但在不规则海况下将响应放大高达 278%，而无条件修正则触发灾难性共振失稳。</span>
         </p>
-        <div class="figure-grid cols-3">
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/fowt/fig02_failure_map.png" alt="KC-steepness failure map" loading="lazy"></div>
-                <figcaption>KC-steepness failure map: quantifying regime-dependent Morison model error across the parameter space.</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/fowt/fig03_cylinder_forces.png" alt="Cylinder force validation" loading="lazy"></div>
-                <figcaption>Single-cylinder force validation: Sarpkaya coefficients vs fixed coefficients across KC regimes.</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/fowt/fig05_free_decay.png" alt="Free decay validation" loading="lazy"></div>
-                <figcaption>Free decay validation: surge, heave, and pitch damping characteristics of the DeepCwind platform.</figcaption>
-            </figure>
-        </div>
-        <div class="figure-grid cols-2">
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/fowt/fig06_regular_wave.png" alt="Regular wave response" loading="lazy"></div>
-                <figcaption>Regular wave response: adaptive correction reduces surge RMS by 12% via increased cross-brace drag.</figcaption>
-            </figure>
-            <figure class="figure-item" onclick="openLightbox(this)">
-                <div class="fig-frame"><img src="figures/fowt/fig07_irregular_wave.png" alt="Irregular wave response" loading="lazy"></div>
-                <figcaption>Irregular wave response: corrections amplify surge by up to 278% through difference-frequency excitation.</figcaption>
-            </figure>
+        <div class="fig-gallery">
+            <div class="fig-main-wrap">
+                <div class="fig-main-frame"><img class="fig-main-img" src="" alt=""></div>
+                <figcaption class="fig-main-cap"></figcaption>
+            </div>
+            <div class="fig-thumbstrip">
+                <div class="fig-thumb" data-cap="KC-steepness failure map: quantifying regime-dependent Morison model error across the parameter space."><img src="figures/fowt/fig02_failure_map.png" alt="KC-steepness failure map"></div>
+                <div class="fig-thumb" data-cap="Single-cylinder force validation: Sarpkaya coefficients vs fixed coefficients across KC regimes."><img src="figures/fowt/fig03_cylinder_forces.png" alt="Cylinder force validation"></div>
+                <div class="fig-thumb" data-cap="Free decay validation: surge, heave, and pitch damping characteristics of the DeepCwind platform."><img src="figures/fowt/fig05_free_decay.png" alt="Free decay validation"></div>
+                <div class="fig-thumb" data-cap="Regular wave response: adaptive correction reduces surge RMS by 12% via increased cross-brace drag."><img src="figures/fowt/fig06_regular_wave.png" alt="Regular wave response"></div>
+                <div class="fig-thumb" data-cap="Irregular wave response: corrections amplify surge by up to 278% through difference-frequency excitation."><img src="figures/fowt/fig07_irregular_wave.png" alt="Irregular wave response"></div>
+            </div>
         </div>
         <div class="paper-tags">
-            <span>Floating offshore wind</span>
-            <span>Hydrodynamic loads</span>
-            <span>Adaptive fidelity</span>
-            <span>Keulegan-Carpenter number</span>
-            <span>Morison equation</span>
-            <span>Coupled simulation</span>
+            <span>Floating offshore wind</span><span>Hydrodynamic loads</span><span>Adaptive fidelity</span>
+            <span>Keulegan-Carpenter number</span><span>Morison equation</span><span>Coupled simulation</span>
         </div>
     </div>
 </section>
@@ -579,15 +493,9 @@
                 <span class="lang-zh hidden">我的工作专注于开发跨尺度、跨保真度的物理信息计算框架：从涡轮尾水管中的涡分辨流场模拟，到海上结构的自适应水动力荷载模型，再到电网规模需求预测的集成机器学习。</span>
             </p>
             <div class="skill-tags">
-                <span>CFD</span>
-                <span>Machine Learning</span>
-                <span>Fluid-Structure Interaction</span>
-                <span>Python</span>
-                <span>OpenFOAM</span>
-                <span>XGBoost / PyTorch</span>
-                <span>Finite Element Analysis</span>
-                <span>Hydrodynamics</span>
-                <span>LaTeX</span>
+                <span>CFD</span><span>Machine Learning</span><span>Fluid-Structure Interaction</span>
+                <span>Python</span><span>OpenFOAM</span><span>XGBoost / PyTorch</span>
+                <span>Finite Element Analysis</span><span>Hydrodynamics</span><span>LaTeX</span>
             </div>
         </div>
     </div>
@@ -610,41 +518,218 @@
     <span class="lang-zh hidden">最后更新：2026 年 2 月</span>
 </footer>
 
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" aria-label="Close">&times;</button>
-    <img id="lightbox-img" src="" alt="">
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="lb-close" onclick="closeLightbox()">&times;</button>
+    <button class="lb-arrow lb-prev" onclick="lbNav(-1)">&#8249;</button>
+    <button class="lb-arrow lb-next" onclick="lbNav(1)">&#8250;</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lb-caption" id="lb-caption"></div>
+    <div class="lb-counter" id="lb-counter"></div>
 </div>
 
 <script>
-let lang = localStorage.getItem('lang') || 'en';
+/* ── Language toggle ── */
+var lang = localStorage.getItem('lang') || 'en';
 applyLang();
-
 function toggleLang() {
     lang = lang === 'en' ? 'zh' : 'en';
     localStorage.setItem('lang', lang);
     applyLang();
 }
-
 function applyLang() {
-    document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', lang !== 'en'));
-    document.querySelectorAll('.lang-zh').forEach(el => el.classList.toggle('hidden', lang !== 'zh'));
+    document.querySelectorAll('.lang-en').forEach(function(el) { el.classList.toggle('hidden', lang !== 'en'); });
+    document.querySelectorAll('.lang-zh').forEach(function(el) { el.classList.toggle('hidden', lang !== 'zh'); });
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
 }
 
-function openLightbox(figEl) {
-    var img = figEl.querySelector('img');
-    document.getElementById('lightbox-img').src = img.src;
-    document.getElementById('lightbox-img').alt = img.alt;
+/* ── Figure galleries ── */
+document.querySelectorAll('.fig-gallery').forEach(function(gallery) {
+    var thumbs = gallery.querySelectorAll('.fig-thumb');
+    var mainImg = gallery.querySelector('.fig-main-img');
+    var mainCap = gallery.querySelector('.fig-main-cap');
+    var mainWrap = gallery.querySelector('.fig-main-wrap');
+
+    function selectThumb(idx) {
+        var t = thumbs[idx];
+        mainImg.src = t.querySelector('img').src;
+        mainImg.alt = t.querySelector('img').alt;
+        mainCap.textContent = t.getAttribute('data-cap');
+        thumbs.forEach(function(th) { th.classList.remove('active'); });
+        t.classList.add('active');
+        gallery.setAttribute('data-current', idx);
+    }
+
+    thumbs.forEach(function(t, i) {
+        t.addEventListener('click', function() { selectThumb(i); });
+    });
+
+    mainWrap.addEventListener('click', function() {
+        var idx = parseInt(gallery.getAttribute('data-current') || '0');
+        openLightbox(gallery, idx);
+    });
+
+    selectThumb(0);
+});
+
+/* ── Lightbox with navigation ── */
+var lbGallery = null;
+var lbIndex = 0;
+var lbThumbs = [];
+
+function openLightbox(gallery, idx) {
+    lbGallery = gallery;
+    lbThumbs = gallery.querySelectorAll('.fig-thumb');
+    lbIndex = idx;
+    showLbFigure();
     document.getElementById('lightbox').classList.add('active');
+}
+
+function showLbFigure() {
+    var t = lbThumbs[lbIndex];
+    document.getElementById('lb-img').src = t.querySelector('img').src;
+    document.getElementById('lb-img').alt = t.querySelector('img').alt;
+    document.getElementById('lb-caption').textContent = t.getAttribute('data-cap');
+    document.getElementById('lb-counter').textContent = (lbIndex + 1) + ' / ' + lbThumbs.length;
+}
+
+function lbNav(dir) {
+    event.stopPropagation();
+    lbIndex = (lbIndex + dir + lbThumbs.length) % lbThumbs.length;
+    showLbFigure();
 }
 
 function closeLightbox() {
     document.getElementById('lightbox').classList.remove('active');
 }
 
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeLightbox();
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
 });
+
+document.addEventListener('keydown', function(e) {
+    var lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') { lbIndex = (lbIndex - 1 + lbThumbs.length) % lbThumbs.length; showLbFigure(); }
+    if (e.key === 'ArrowRight') { lbIndex = (lbIndex + 1) % lbThumbs.length; showLbFigure(); }
+});
+
+/* ── Flow dynamics canvas animation ── */
+(function() {
+    var canvas = document.getElementById('hero-canvas');
+    var ctx = canvas.getContext('2d');
+    var W, H, dpr;
+
+    function resize() {
+        dpr = window.devicePixelRatio || 1;
+        W = canvas.offsetWidth;
+        H = canvas.offsetHeight;
+        canvas.width = W * dpr;
+        canvas.height = H * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    // Vortex field: Lamb-Oseen vortices advecting with a base flow
+    var vortices = [];
+    var NUM_V = 14;
+    for (var i = 0; i < NUM_V; i++) {
+        vortices.push({
+            x: Math.random() * W * 1.5,
+            y: Math.random() * H,
+            s: (i % 2 === 0 ? 1 : -1) * (1.5 + Math.random() * 2.5), // strength, alternating sign (von Kármán)
+            r: 35 + Math.random() * 50, // core radius
+            vx: 0.25 + Math.random() * 0.35,
+            vy: (Math.random() - 0.5) * 0.15
+        });
+    }
+
+    // Particles
+    var particles = [];
+    var NUM_P = 1400;
+    for (var i = 0; i < NUM_P; i++) {
+        particles.push({
+            x: Math.random() * W,
+            y: Math.random() * H,
+            px: 0, py: 0, // previous position
+            sp: 0 // speed
+        });
+    }
+
+    function velAt(x, y) {
+        var vx = 0.7, vy = 0;
+        for (var i = 0; i < vortices.length; i++) {
+            var v = vortices[i];
+            var dx = x - v.x, dy = y - v.y;
+            var r2 = dx * dx + dy * dy + 200;
+            var decay = Math.exp(-r2 / (v.r * v.r * 2));
+            vx += (-dy * v.s * decay) / r2 * 120;
+            vy += (dx * v.s * decay) / r2 * 120;
+        }
+        return [vx, vy];
+    }
+
+    var t = 0;
+    function animate() {
+        // Semi-transparent fill for trail effect
+        ctx.fillStyle = 'rgba(6, 14, 28, 0.12)';
+        ctx.fillRect(0, 0, W, H);
+
+        t += 0.003;
+
+        // Update vortices
+        for (var i = 0; i < vortices.length; i++) {
+            var v = vortices[i];
+            v.x += v.vx;
+            v.y += v.vy + Math.sin(t * 2 + i) * 0.08;
+            if (v.x > W + 120) { v.x = -120; v.y = Math.random() * H; }
+            if (v.y < -40) v.vy = Math.abs(v.vy);
+            if (v.y > H + 40) v.vy = -Math.abs(v.vy);
+        }
+
+        // Update and draw particles
+        for (var i = 0; i < particles.length; i++) {
+            var p = particles[i];
+            p.px = p.x;
+            p.py = p.y;
+
+            var vel = velAt(p.x, p.y);
+            p.x += vel[0];
+            p.y += vel[1];
+            p.sp = Math.sqrt(vel[0] * vel[0] + vel[1] * vel[1]);
+
+            if (p.x > W + 10 || p.x < -10 || p.y > H + 10 || p.y < -10) {
+                p.x = Math.random() * 15 - 10;
+                p.y = Math.random() * H;
+                p.px = p.x; p.py = p.y;
+                continue;
+            }
+
+            // Color by speed: dark blue → cyan → white
+            var s = Math.min(p.sp / 3.5, 1);
+            var r = Math.floor(20 + s * 130);
+            var g = Math.floor(60 + s * 160);
+            var b = Math.floor(140 + s * 115);
+            var a = 0.15 + s * 0.45;
+
+            ctx.beginPath();
+            ctx.moveTo(p.px, p.py);
+            ctx.lineTo(p.x, p.y);
+            ctx.strokeStyle = 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
+            ctx.lineWidth = 0.8 + s * 1.2;
+            ctx.stroke();
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    // Initial fill
+    ctx.fillStyle = '#060e1c';
+    ctx.fillRect(0, 0, W, H);
+    animate();
+})();
 </script>
 
 </body>
