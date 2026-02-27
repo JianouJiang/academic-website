@@ -317,15 +317,62 @@
         <span class="lang-zh hidden">牛津大学</span>
     </p>
     <p class="summary">
-        <span class="lang-en">I develop computational and machine learning methods for energy systems — from electricity demand forecasting to turbine structural integrity and floating offshore wind hydrodynamics.</span>
-        <span class="lang-zh hidden">我为能源系统开发计算与机器学习方法——涵盖电力需求预测、水轮机结构完整性及浮式海上风电水动力学。</span>
+        <span class="lang-en">I develop computational and machine learning methods for energy systems — from wind farm wake modelling and electricity demand forecasting to turbine structural integrity and floating offshore wind hydrodynamics.</span>
+        <span class="lang-zh hidden">我为能源系统开发计算与机器学习方法——涵盖风电场尾流建模、电力需求预测、水轮机结构完整性及浮式海上风电水动力学。</span>
     </p>
 </section>
 
 <section class="section" id="research">
     <h2 class="section-title"><span class="lang-en">Research</span><span class="lang-zh hidden">研究</span></h2>
 
-    <!-- Paper 1: Demand Forecasting -->
+    <!-- Paper 1: JWEIA Wind Farm -->
+    <div class="paper-card">
+        <span class="journal-badge">J. Wind Eng. Ind. Aerodyn., 2026</span>
+        <h3>
+            <span class="lang-en">Parametric Assessment of Wind Farm Performance Under Varying Terrain and Atmospheric Stability Using an Analytical Wake Model</span>
+            <span class="lang-zh hidden">基于解析尾流模型的风电场性能在不同地形与大气稳定度下的参数化评估</span>
+        </h3>
+        <p class="paper-summary">
+            <span class="lang-en">Stability-driven differences in wind farm power are commonly attributed to wake recovery rates, but the relative contributions of hub-height wind speed and wake dynamics are rarely separated. We present a matched-velocity analysis showing that when hub-height wind speed is held constant, the residual stability effect on wake recovery accounts for only ~7% variation in farm power — while total power variation exceeds a factor of 2.3 when each condition uses its Monin-Obukhov prescribed wind speed. The framework uses the Bastankhah-Porté-Agel Gaussian wake model with stability- and terrain-dependent corrections, applied to a 3x3 NREL 5 MW farm across three terrain types and three stability classes. RANS validation in OpenFOAM confirms farm-level power agreement within 5.2%.</span>
+            <span class="lang-zh hidden">风电场功率的稳定度差异通常归因于尾流恢复速率，但轮毂高度风速与尾流动力学的相对贡献很少被分离。我们提出了匹配风速分析，表明当轮毂高度风速保持恒定时，稳定度对尾流恢复的残余效应仅占约 7% 的功率变化——而当各工况使用其 Monin-Obukhov 规定风速时，总功率变化超过 2.3 倍。该框架使用 Bastankhah-Porté-Agel 高斯尾流模型结合稳定度和地形修正，应用于三种地形和三种稳定度等级下的 3x3 NREL 5 MW 风场。OpenFOAM RANS 验证确认风场级功率一致性在 5.2% 以内。</span>
+        </p>
+        <div class="figure-grid cols-3">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/jweia/fig05_velocity_contours_matrix.png" alt="Velocity contour matrix" loading="lazy"></div>
+                <figcaption>Velocity deficit contours: 3x3 parametric matrix across terrain types (rows) and stability classes (columns).</figcaption>
+            </figure>
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/jweia/fig13_power_heatmap.png" alt="Power output heatmap" loading="lazy"></div>
+                <figcaption>Farm power heatmap: terrain-stability interaction is non-additive, with terrain mixing benefiting stable conditions most (+6%).</figcaption>
+            </figure>
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/jweia/fig16_matched_velocity.png" alt="Matched velocity analysis" loading="lazy"></div>
+                <figcaption>Matched-velocity analysis: hub-height wind speed dominates (2.3x), wake recovery contributes only ~7%.</figcaption>
+            </figure>
+        </div>
+        <div class="figure-grid cols-2">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/jweia/fig20_cfd_3d_visualization.png" alt="3D CFD wake visualization" loading="lazy"></div>
+                <figcaption>3D RANS visualization of the 3x3 wind farm wake field in OpenFOAM.</figcaption>
+            </figure>
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/jweia/fig14_seasonal_variation.png" alt="Seasonal power variation" loading="lazy"></div>
+                <figcaption>Seasonal atmospheric variation produces a 40% swing in farm power, driven by friction velocity differences.</figcaption>
+            </figure>
+        </div>
+        <div class="paper-tags">
+            <span>Wind farm</span>
+            <span>Analytical wake model</span>
+            <span>Atmospheric stability</span>
+            <span>Terrain effects</span>
+            <span>Gaussian wake</span>
+            <span>Monin-Obukhov similarity</span>
+            <span>OpenFOAM</span>
+            <span>RANS validation</span>
+        </div>
+    </div>
+
+    <!-- Paper 2: Demand Forecasting -->
     <div class="paper-card">
         <span class="journal-badge">Applied Energy, 2026</span>
         <h3>
@@ -342,8 +389,22 @@
                 <figcaption>UMSE pipeline: weather, usage, and pricing features fused through attention-weighted ensemble.</figcaption>
             </figure>
             <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/demand/fig03_data_overview.png" alt="Dataset overview" loading="lazy"></div>
+                <figcaption>Dataset overview: two years of hourly demand, weather, and pricing data with seasonal patterns.</figcaption>
+            </figure>
+            <figure class="figure-item" onclick="openLightbox(this)">
                 <div class="fig-frame"><img src="figures/demand/fig04_main_results.png" alt="Model comparison results" loading="lazy"></div>
                 <figcaption>Model comparison: XGBoost with usage features outperforms the full ensemble (MAPE 0.278% vs 0.324%).</figcaption>
+            </figure>
+        </div>
+        <div class="figure-grid cols-3">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/demand/fig05_seasonal_performance.png" alt="Seasonal performance" loading="lazy"></div>
+                <figcaption>Seasonal performance breakdown: model accuracy varies with temperature-driven demand patterns.</figcaption>
+            </figure>
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/demand/fig07_attention_weights.png" alt="Attention weights" loading="lazy"></div>
+                <figcaption>Attention weights: 96.3% average weight to the XGBoost branch, indicating minimal LSTM contribution.</figcaption>
             </figure>
             <figure class="figure-item" onclick="openLightbox(this)">
                 <div class="fig-frame"><img src="figures/demand/fig08_generation_waste.png" alt="Generation waste reduction" loading="lazy"></div>
@@ -360,7 +421,7 @@
         </div>
     </div>
 
-    <!-- Paper 2: Draft Tube Cavitation -->
+    <!-- Paper 3: Draft Tube Cavitation -->
     <div class="paper-card">
         <span class="journal-badge">Renewable Energy, 2026</span>
         <h3>
@@ -377,8 +438,22 @@
                 <figcaption>Three canonical vortex rope morphologies: helical (part-load), columnar (overload), double-helix (deep part-load).</figcaption>
             </figure>
             <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/cavitation/fig05_pressure_phase.png" alt="Pressure phase distributions" loading="lazy"></div>
+                <figcaption>Circumferential pressure phase distributions: m=1 (helical), m=0 (columnar), m=2 (double-helix).</figcaption>
+            </figure>
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/cavitation/fig06_modal_analysis.png" alt="Modal analysis" loading="lazy"></div>
+                <figcaption>Runner modal analysis: each pressure mode selectively excites different nodal diameter structural modes.</figcaption>
+            </figure>
+        </div>
+        <div class="figure-grid cols-3">
+            <figure class="figure-item" onclick="openLightbox(this)">
                 <div class="fig-frame"><img src="figures/cavitation/fig07_stress_contours.png" alt="Von Mises stress contours" loading="lazy"></div>
                 <figcaption>Von Mises stress contours on runner blades: each morphology concentrates stress at distinct locations.</figcaption>
+            </figure>
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/cavitation/fig10_fatigue_life.png" alt="Fatigue life estimates" loading="lazy"></div>
+                <figcaption>Fatigue life estimates: failure location shifts from trailing edge (part-load) to leading edge (deep part-load).</figcaption>
             </figure>
             <figure class="figure-item" onclick="openLightbox(this)">
                 <div class="fig-frame"><img src="figures/cavitation/fig11_causal_chain.png" alt="Causal chain flowchart" loading="lazy"></div>
@@ -395,7 +470,7 @@
         </div>
     </div>
 
-    <!-- Paper 3: FOWT Hydrodynamics -->
+    <!-- Paper 4: FOWT Hydrodynamics -->
     <div class="paper-card">
         <span class="journal-badge">Ocean Engineering, 2026</span>
         <h3>
@@ -406,14 +481,28 @@
             <span class="lang-en">Mid-fidelity hydrodynamic models for floating offshore wind turbines rely on fixed Morison coefficients that do not capture nonlinear force variation across flow regimes. We present a diagnostic and correction framework that evaluates physics-based fidelity indicators — the Keulegan-Carpenter number, wave steepness, and relative motion amplitude — at each structural member and time step. A KC-steepness failure map quantifies regime-dependent error against experimentally-calibrated coefficients. Applied to the DeepCwind semi-submersible, the framework reveals that targeted corrections reduce surge in regular waves but amplify response by up to 278% in irregular seas through difference-frequency excitation, while unconditional correction triggers catastrophic resonant instability.</span>
             <span class="lang-zh hidden">浮式海上风力发电机组的中等保真度水动力模型依赖固定的 Morison 系数，无法捕捉不同流动区域的非线性力变化。我们提出了一个诊断与修正框架，在每个结构构件和每个时间步评估基于物理的保真度指标——Keulegan-Carpenter 数、波陡和相对运动幅值。KC-波陡失效图量化了相对于实验标定系数的区域相关误差。应用于 DeepCwind 半潜式平台，该框架揭示了定向修正在规则波中降低纵荡，但在不规则海况下通过差频激励将响应放大高达 278%，而无条件修正则触发灾难性共振失稳。</span>
         </p>
-        <div class="figure-grid cols-2">
+        <div class="figure-grid cols-3">
             <figure class="figure-item" onclick="openLightbox(this)">
                 <div class="fig-frame"><img src="figures/fowt/fig02_failure_map.png" alt="KC-steepness failure map" loading="lazy"></div>
                 <figcaption>KC-steepness failure map: quantifying regime-dependent Morison model error across the parameter space.</figcaption>
             </figure>
             <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/fowt/fig03_cylinder_forces.png" alt="Cylinder force validation" loading="lazy"></div>
+                <figcaption>Single-cylinder force validation: Sarpkaya coefficients vs fixed coefficients across KC regimes.</figcaption>
+            </figure>
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/fowt/fig05_free_decay.png" alt="Free decay validation" loading="lazy"></div>
+                <figcaption>Free decay validation: surge, heave, and pitch damping characteristics of the DeepCwind platform.</figcaption>
+            </figure>
+        </div>
+        <div class="figure-grid cols-2">
+            <figure class="figure-item" onclick="openLightbox(this)">
+                <div class="fig-frame"><img src="figures/fowt/fig06_regular_wave.png" alt="Regular wave response" loading="lazy"></div>
+                <figcaption>Regular wave response: adaptive correction reduces surge RMS by 12% via increased cross-brace drag.</figcaption>
+            </figure>
+            <figure class="figure-item" onclick="openLightbox(this)">
                 <div class="fig-frame"><img src="figures/fowt/fig07_irregular_wave.png" alt="Irregular wave response" loading="lazy"></div>
-                <figcaption>Irregular wave response: adaptive corrections amplify surge through difference-frequency excitation of the natural mode.</figcaption>
+                <figcaption>Irregular wave response: corrections amplify surge by up to 278% through difference-frequency excitation.</figcaption>
             </figure>
         </div>
         <div class="paper-tags">
