@@ -402,40 +402,6 @@
         </div>
     </div>
 
-    <!-- Paper 2: Demand Forecasting -->
-    <div class="paper-card">
-        <div class="paper-header">
-            <span class="journal-badge">Applied Energy, 2026</span>
-            <span class="preprint-badge">Preprint</span>
-            <a href="papers/demand_forecasting_preview.pdf" target="_blank" class="pdf-link"><span class="lang-en">Preview PDF</span><span class="lang-zh hidden">预览 PDF</span></a>
-        </div>
-        <h3>
-            <span class="lang-en">Machine Learning Demand Forecasting Integrating Weather, Usage Patterns, and Pricing to Reduce Utility Generation Waste</span>
-            <span class="lang-zh hidden">融合天气、用电模式与电价的机器学习需求预测：降低电力系统发电浪费</span>
-        </h3>
-        <p class="paper-summary">
-            <span class="lang-en">We propose the Unified Multi-Source Ensemble (UMSE) framework, which fuses gradient-boosted trees (XGBoost) and LSTM networks through a learned attention mechanism to forecast short-term electricity demand. Evaluated on a dataset reproducing the statistical properties of a mid-sized North American utility, all models incorporating usage features achieve MAPE below 1%. An honest evaluation reveals that XGBoost alone outperforms the full ensemble — the attention mechanism assigns 96.3% weight to the tree branch. Both approaches reduce cumulative over-generation waste by approximately 77% relative to persistence baseline.</span>
-            <span class="lang-zh hidden">我们提出了统一多源集成（UMSE）框架，通过学习注意力机制融合梯度提升树（XGBoost）与 LSTM 网络，用于短期电力需求预测。在再现北美中型电力公司统计特性的数据集上评估，所有结合用电特征的模型均实现 MAPE 低于 1%。诚实评估表明，单独的 XGBoost 优于完整集成——注意力机制将 96.3% 的权重分配给树模型分支。两种方法均将累计过度发电浪费降低约 77%。</span>
-        </p>
-        <div class="fig-gallery">
-            <div class="fig-main-wrap">
-                <div class="fig-main-frame"><img class="fig-main-img" src="" alt=""></div>
-                <figcaption class="fig-main-cap"></figcaption>
-            </div>
-            <div class="fig-thumbstrip">
-                <div class="fig-thumb" data-cap="Fig 2: Distribution of daily MAPE across 106 test days. XGBoost-Usage shows the tightest distribution."><img src="figures/demand/fig02_mape_comparison.png?v=3" alt="Daily MAPE distribution"></div>
-                <div class="fig-thumb" data-cap="Fig 4: Hourly MAPE profiles for selected models. XGBoost-Usage maintains sub-0.2% error across all hours."><img src="figures/demand/fig05_diurnal_performance.png?v=3" alt="Diurnal MAPE profiles"></div>
-                <div class="fig-thumb" data-cap="Fig 5: Attention weight diagnostics. XGBoost branch receives near-total weight, LSTM contribution minimal."><img src="figures/demand/fig06_attention_weights.png?v=3" alt="Attention weight diagnostics"></div>
-                <div class="fig-thumb" data-cap="Fig 6: SHAP beeswarm for top-15 features of XGBoost-All, revealing usage-pattern dominance."><img src="figures/demand/fig07_feature_importance.png?v=3" alt="SHAP feature importance"></div>
-                <div class="fig-thumb" data-cap="Fig 7: One-week extract. Actual demand overlaid with XGBoost-Usage and UMSE predictions."><img src="figures/demand/fig10_prediction_timeseries.png?v=3" alt="One-week prediction extract"></div>
-            </div>
-        </div>
-        <div class="paper-tags">
-            <span>Electricity demand forecasting</span><span>Machine learning</span><span>XGBoost</span>
-            <span>LSTM</span><span>Attention mechanism</span><span>Generation waste</span>
-        </div>
-    </div>
-
     <!-- Paper 3: Draft Tube Cavitation -->
     <div class="paper-card">
         <div class="paper-header">
@@ -502,6 +468,40 @@
         <div class="paper-tags">
             <span>Floating offshore wind</span><span>Hydrodynamic loads</span><span>Adaptive fidelity</span>
             <span>Keulegan-Carpenter number</span><span>Morison equation</span><span>Coupled simulation</span>
+        </div>
+    </div>
+
+    <!-- Paper 5: Demand Forecasting -->
+    <div class="paper-card">
+        <div class="paper-header">
+            <span class="journal-badge">Applied Energy, 2026</span>
+            <span class="preprint-badge">Preprint</span>
+            <a href="papers/demand_forecasting_preview.pdf" target="_blank" class="pdf-link"><span class="lang-en">Preview PDF</span><span class="lang-zh hidden">预览 PDF</span></a>
+        </div>
+        <h3>
+            <span class="lang-en">Machine Learning Demand Forecasting Integrating Weather, Usage Patterns, and Pricing to Reduce Utility Generation Waste</span>
+            <span class="lang-zh hidden">融合天气、用电模式与电价的机器学习需求预测：降低电力系统发电浪费</span>
+        </h3>
+        <p class="paper-summary">
+            <span class="lang-en">We propose the Unified Multi-Source Ensemble (UMSE) framework, which fuses gradient-boosted trees (XGBoost) and LSTM networks through a learned attention mechanism to forecast short-term electricity demand. Evaluated on a dataset reproducing the statistical properties of a mid-sized North American utility, all models incorporating usage features achieve MAPE below 1%. An honest evaluation reveals that XGBoost alone outperforms the full ensemble — the attention mechanism assigns 96.3% weight to the tree branch. Both approaches reduce cumulative over-generation waste by approximately 77% relative to persistence baseline.</span>
+            <span class="lang-zh hidden">我们提出了统一多源集成（UMSE）框架，通过学习注意力机制融合梯度提升树（XGBoost）与 LSTM 网络，用于短期电力需求预测。在再现北美中型电力公司统计特性的数据集上评估，所有结合用电特征的模型均实现 MAPE 低于 1%。诚实评估表明，单独的 XGBoost 优于完整集成——注意力机制将 96.3% 的权重分配给树模型分支。两种方法均将累计过度发电浪费降低约 77%。</span>
+        </p>
+        <div class="fig-gallery">
+            <div class="fig-main-wrap">
+                <div class="fig-main-frame"><img class="fig-main-img" src="" alt=""></div>
+                <figcaption class="fig-main-cap"></figcaption>
+            </div>
+            <div class="fig-thumbstrip">
+                <div class="fig-thumb" data-cap="Fig 2: Distribution of daily MAPE across 106 test days. XGBoost-Usage shows the tightest distribution."><img src="figures/demand/fig02_mape_comparison.png?v=3" alt="Daily MAPE distribution"></div>
+                <div class="fig-thumb" data-cap="Fig 4: Hourly MAPE profiles for selected models. XGBoost-Usage maintains sub-0.2% error across all hours."><img src="figures/demand/fig05_diurnal_performance.png?v=3" alt="Diurnal MAPE profiles"></div>
+                <div class="fig-thumb" data-cap="Fig 5: Attention weight diagnostics. XGBoost branch receives near-total weight, LSTM contribution minimal."><img src="figures/demand/fig06_attention_weights.png?v=3" alt="Attention weight diagnostics"></div>
+                <div class="fig-thumb" data-cap="Fig 6: SHAP beeswarm for top-15 features of XGBoost-All, revealing usage-pattern dominance."><img src="figures/demand/fig07_feature_importance.png?v=3" alt="SHAP feature importance"></div>
+                <div class="fig-thumb" data-cap="Fig 7: One-week extract. Actual demand overlaid with XGBoost-Usage and UMSE predictions."><img src="figures/demand/fig10_prediction_timeseries.png?v=3" alt="One-week prediction extract"></div>
+            </div>
+        </div>
+        <div class="paper-tags">
+            <span>Electricity demand forecasting</span><span>Machine learning</span><span>XGBoost</span>
+            <span>LSTM</span><span>Attention mechanism</span><span>Generation waste</span>
         </div>
     </div>
 </section>
