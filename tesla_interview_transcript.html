@@ -68,6 +68,7 @@
         .speaker.interviewer-a { color: #1e40af; }
         .speaker.interviewer-b { color: #6d28d9; }
         .speaker.candidate { color: #059669; }
+        .speaker.facilitator { color: #78716c; }
         .turn p { font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 6px; }
         .turn ul { margin-left: 20px; font-size: 0.92rem; color: var(--text-secondary); }
         .turn li { margin-bottom: 2px; }
@@ -120,21 +121,49 @@
 
     <div class="meta">
         <p><strong>Position:</strong> AI Native Scientist — AI & Industrial Internet, Tesla China (Shanghai)</p>
+        <p><strong>Location:</strong> No. 56, North 4th Ring Road West, Beijing (video call)</p>
         <p><strong>Date:</strong> March 11, 2026</p>
         <p><strong>Format:</strong> Video call, ~40 minutes</p>
-        <p><strong>Interviewers:</strong> Senior AI Expert (Speaker 1 / Speaker 2), Die-casting Simulation Expert (Speaker 4)</p>
-        <p><strong>Candidate:</strong> Jianou Jiang / 姜剑欧 (Speaker 3)</p>
+        <p><strong>Interviewers:</strong> Senior AI Expert (Interviewer A), Die-casting Simulation Expert (Interviewer B)</p>
+        <p><strong>Candidate:</strong> Jianou Jiang / 姜剑欧</p>
         <p><strong>Accompanying material:</strong> <a href="tesla_interview_2026.pdf">Presentation slides (PDF)</a></p>
     </div>
 
     <div class="corrections">
         <h3>Transcription Corrections</h3>
-        <p>The following keywords were mis-transcribed by the speech-to-text system and have been corrected below:</p>
+        <p>The speech-to-text system produced numerous mis-transcriptions of technical terms. Key corrections applied throughout:</p>
         <ul>
+            <li><span class="wrong">押注</span> &rarr; <span class="right">压铸 (die-casting)</span></li>
             <li><span class="wrong">Approximate Auto Counting</span> &rarr; <span class="right">Proxima Auto Company</span></li>
-            <li><span class="wrong">Adder</span> &rarr; <span class="right">AIDER</span> (AI-Driven Energy Research journal)</li>
-            <li><span class="wrong">OpenCloud</span> &rarr; <span class="right">Claude Code</span> (Anthropic's CLI tool)</li>
-            <li><span class="wrong">新通院</span> &rarr; <span class="right">信通院</span> (CAICT / 中国信息通信研究院)</li>
+            <li><span class="wrong">Adder</span> &rarr; <span class="right">AIDER</span> (AI-Driven Energy Research)</li>
+            <li><span class="wrong">Count</span> &rarr; <span class="right">Quant</span> (quantitative trading project)</li>
+            <li><span class="wrong">Open Cloud / Open Call / Open Clock</span> &rarr; <span class="right">Claude Code</span> (Anthropic's CLI tool)</li>
+            <li><span class="wrong">Cloud</span> (AI context) &rarr; <span class="right">Claude</span></li>
+            <li><span class="wrong">Paper Faction</span> &rarr; <span class="right">Paper Factory</span></li>
+            <li><span class="wrong">Proxy Al Auto Company</span> &rarr; <span class="right">Proxima Auto Company</span></li>
+            <li><span class="wrong">Big Man / Big Main</span> &rarr; <span class="right">Bitmain (比特大陆)</span></li>
+            <li><span class="wrong">优乐</span> &rarr; <span class="right">YOLO</span></li>
+            <li><span class="wrong">Grounding Piano</span> &rarr; <span class="right">Grounding DINO</span></li>
+            <li><span class="wrong">Rest Net / Rest Night</span> &rarr; <span class="right">ResNet</span></li>
+            <li><span class="wrong">Open Form</span> &rarr; <span class="right">OpenFOAM</span></li>
+            <li><span class="wrong">FluentFlow D</span> &rarr; <span class="right">Fluent, FLOW-3D</span></li>
+            <li><span class="wrong">Neva Store Equations</span> &rarr; <span class="right">Navier-Stokes equations</span></li>
+            <li><span class="wrong">Finance Volume / Elements</span> &rarr; <span class="right">Finite Volume / Elements</span></li>
+            <li><span class="wrong">Disco Ization</span> &rarr; <span class="right">Discretization</span></li>
+            <li><span class="wrong">Polo Oman Al</span> &rarr; <span class="right">Polynomial</span></li>
+            <li><span class="wrong">Fisher / Pitch Variables</span> &rarr; <span class="right">Feature Variables</span></li>
+            <li><span class="wrong">Scatter</span> (data context) &rarr; <span class="right">SCADA</span></li>
+            <li><span class="wrong">PC Analysis</span> &rarr; <span class="right">PCA (Principal Component Analysis)</span></li>
+            <li><span class="wrong">闭面函数</span> &rarr; <span class="right">壁面函数 (wall function)</span></li>
+            <li><span class="wrong">吴亮刚说 / 吴阳刚 / 乌兰刚数</span> &rarr; <span class="right">无量纲数 (dimensionless numbers)</span></li>
+            <li><span class="wrong">联络数</span> &rarr; <span class="right">雷诺数 (Reynolds number)</span></li>
+            <li><span class="wrong">Heaven Layers</span> &rarr; <span class="right">Hidden Layers</span></li>
+            <li><span class="wrong">Hyper Parent Ter</span> &rarr; <span class="right">Hyperparameter</span></li>
+            <li><span class="wrong">Four Tex</span> &rarr; <span class="right">Vortex</span></li>
+            <li><span class="wrong">新通院</span> &rarr; <span class="right">信通院 (CAICT / 中国信息通信研究院)</span></li>
+            <li><span class="wrong">顺态</span> &rarr; <span class="right">瞬态 (transient)</span></li>
+            <li><span class="wrong">Fractional Velocity</span> &rarr; <span class="right">Friction Velocity</span></li>
+            <li><span class="wrong">金币 / 禁闭速度</span> &rarr; <span class="right">近壁速度 (near-wall velocity)</span></li>
         </ul>
     </div>
 
@@ -143,212 +172,378 @@
     <h2 class="section-heading">Opening</h2>
 
     <div class="turn">
+        <div class="speaker facilitator">Facilitator</div>
+        <p>没有问题，都清楚了吧？</p>
+    </div>
+    <div class="turn">
         <div class="speaker interviewer-a">Interviewer A (AI Expert)</div>
-        <p>没有问题，都清楚了吗？</p>
+        <p>我开始开视频。</p>
     </div>
     <div class="turn">
         <div class="speaker candidate">Candidate (Jianou Jiang)</div>
-        <p>我先开启视频。</p>
-    </div>
-    <div class="turn">
-        <div class="speaker candidate">Candidate</div>
-        <p>你好。</p>
-    </div>
-    <div class="turn">
-        <div class="speaker interviewer-a">Interviewer A</div>
-        <p>你好。我们来自特斯拉中国 AI 与工业互联网部门。我是这边的资深专家，今天一起参与面试的还有我们压铸部门的一位同事，他也是压铸仿真方向的专家。今天我们一起了解一下您的背景。</p>
-        <p>我已经大致看过您的简历，整体上与我们当前的需求比较匹配。我先简单介绍一下我们团队的工作内容。</p>
-        <p>目前在中国，IT 以及 AI 相关的工作基本集中在我们这个团队。我们的业务主要分为几个方向。</p>
-        <p>首先是<strong>大模型相关工作</strong>，包括大模型的售前、售中和售后支持，例如 AI Flow 等。</p>
-        <p>第二块是<strong>机器人相关方向</strong>，包括 FSD 在中国的落地，以及工厂内部的一些自动化系统，例如无人化 SLAM，以及此前的一些人形机器人的训练工作。</p>
-        <p>第三块是<strong>工厂设备数字化</strong>。这一部分可能与您的背景最为契合。我们的工厂拥有各种设备，在推进智能化之前，我们已经完成了数字化建设。也就是说，在整个工厂建设过程中，所有生产数据都会被记录下来。例如螺丝拧紧过程中的扭矩曲线等，都已经实现了数字化记录。</p>
-        <p>另外，我们还有一个重要创新点：<strong>一体化压铸工艺</strong>。例如 Model Y 的后车架，我们率先采用一体化压铸技术。在压铸过程中，高温铝液会进入模具腔体，其中包含大量的温度控制元件、管路以及控制单元，用于控制铝液的温度和成型过程。</p>
-        <p>在这一过程中可能会出现各种缺陷，例如冷缩、裂纹等，因此我们需要对这些过程进行监测和控制。这也是我们数字化设备系统的一部分。</p>
-        <p>此外，我们团队还负责很多<strong>计算机视觉应用</strong>。例如在生产工艺过程中识别缺陷：喷涂过程中可能会出现表面瑕疵、颜色不均匀等问题。我们也在训练一些视觉模型，对工艺人员的操作行为进行识别与分析。</p>
-        <p>过去我们更多使用小模型，例如使用 YOLO 或 ResNet 在特定数据集上进行训练。但现在我们希望采用类似 Grounding DINO、PaliGemma 等 VLM（Vision-Language Model）方法，构建更加通用的大模型，从而减少每个场景单独训练模型的成本。</p>
-        <p>总体来说，我们的工作大致分为这几类。我想了解一下您更感兴趣的是哪一块。另外，我也非常想听听您在设备数字化或工艺数字化方向的经验。</p>
+        <p>你好你好。</p>
     </div>
 
-    <h2 class="section-heading">Candidate Introduction</h2>
+    <h2 class="section-heading">Tesla Team Introduction</h2>
+
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>你好。我们来自特斯拉中国 AI 与工业互联网部门。我是这边的资深专家，今天一起面试的还有我们<span class="corrected">压铸</span>部门的一位同事，他也是<span class="corrected">压铸</span>仿真方向的专家。我们一起来聊一下您的背景。</p>
+        <p>我大概看过您的简历，与我们当前的需求比较 match。我先简单介绍一下我们这边做什么。</p>
+        <p>目前在中国，IT 以及 AI 相关的工作基本集中在我们这个团队。我们的业务主要分几个方向：</p>
+        <p>首先有一大块是做<strong>大模型</strong>的，包括大模型的售前、售后、售中，包括 AI flow。</p>
+        <p>还有一大块是<strong>robotics 相关</strong>的，包含 FSD 在中国的落地，包含工厂内的无人化 SLAM，以及之前的一些人形机器人训练。</p>
+        <p>还有一块内容是<strong>工厂设备的数字化</strong>，这块可能是跟您的背景最匹配的。我们工厂有各种设备，在智能化之前，我们已经完成了数字化工作。整个工厂建设过程中，所有数据都被数字化记录下来，包括螺丝扭矩的轨迹。</p>
+    </div>
+
+    <h2 class="section-heading">Die-casting Innovation & CV Applications</h2>
+
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>我们现在一个重要创新点是构建了<strong>一体化<span class="corrected">压铸</span></strong>工艺。我们最早对 Model Y 的后车架采用一体化<span class="corrected">压铸</span>。<span class="corrected">压铸</span>过程中，高温铝液进入模具腔体，中间有各种热电偶、管件和控制单元，对整个温度和铝液成型进行控制。在成型过程中可能出现各种缺陷，比如冷缩、裂纹，我们要对这些进行控制。</p>
+        <p>我们 AI 与工业互联网还有一大块内容是各种<strong>计算机视觉应用</strong>。我们用 CV 处理各种工艺过程中的缺陷，比如喷涂过程中可能有瑕疵点、颜色不均匀。现在我们也在对工艺人员的行为进行计算机视觉模型训练。</p>
+        <p>过去我们更多偏向小模型，用 <span class="corrected">YOLO</span> 或 <span class="corrected">ResNet</span> 训练特定数据集。现在我们想用类似 <span class="corrected">Grounding DINO</span> 这样的 VLM 方法训练比较综合的大模型，从而节省在每个小场景上单独训练的成本。</p>
+        <p>大概我们的内容就分这四五类。想看看您感兴趣的方向。我也非常想了解您对数字化设备、数字化工艺这一块的经验。</p>
+    </div>
+
+    <h2 class="section-heading">Candidate Introduction & Screen Share</h2>
 
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>好的。方便的话，您可以允许我共享屏幕吗？我准备了一份 PPT，可以按照这个内容进行介绍。</p>
+        <p>好的。方便投个屏吗？我有一个 PPT 可以照着说一下。</p>
     </div>
     <div class="turn">
         <div class="speaker interviewer-a">Interviewer A</div>
-        <p>好的，我给您屏幕共享权限。</p>
+        <p>好的，我给投屏权限。</p>
     </div>
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>好的，你们现在可以看到屏幕吗？</p>
+        <p>OK，应该可以看到了。</p>
     </div>
     <div class="turn">
-        <div class="speaker interviewer-a">Interviewer A</div>
-        <p>可以。</p>
+        <div class="speaker facilitator">Facilitator</div>
+        <p>OK。</p>
     </div>
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>好的。我这份 PPT 主要介绍的是我博士期间的一些研究内容。不过刚才您提到的压铸缺陷问题，其实与我硕士期间的研究方向更相关。</p>
-        <p>我先简单介绍一下我的整体背景。</p>
-        <p>最近大家都在使用各种云平台，例如 <span class="corrected">Claude Code</span> 来做一些事情。我也尝试使用不同的 agent 进行协作，做了一些小项目。例如：</p>
+        <p>好。我这份 PPT 更多是关于我博士期间的研究内容。不过您刚才说的<span class="corrected">压铸</span>过程中的一些 defects，可能和我硕士研究的方向更相符。我先简短介绍一下。</p>
+        <p>最近大家都在用 <span class="corrected">Claude</span>，包括 <span class="corrected">Claude Code</span> 做一些事情。我也是用不同的 agents 搭配工作，做了几个小项目：</p>
         <ul>
-            <li>Paper Factory</li>
+            <li><span class="corrected">Paper Factory</span></li>
             <li><span class="corrected">Proxima Auto Company</span></li>
-            <li><span class="corrected">AIDER</span> 等</li>
+            <li><span class="corrected">Quant</span></li>
+            <li><span class="corrected">AIDER</span></li>
         </ul>
-        <p>这些项目主要展示我如何利用当前已有的大模型，并通过多个 agent 协作完成任务。当然，在整个过程中仍然需要一定的人类干预。</p>
-        <p>首先简单介绍一下我的背景。</p>
-        <p>在我的简历中，我提到曾在工信部<span class="corrected">信通院</span>实习。实际上，在那之后我还在三峡集团参与过一个项目，实习了两三个月。主要工作是风电机组的故障检测。</p>
-        <p>我在运维中心参与了 SCADA 数据建模，也在风机设备上做了一些实际的检测工作。</p>
+        <p>这些项目展示的是我可以利用现在市面上已有的大模型，包括用 agent 互相搭配来完成任务。当然 human intervention、human interaction is necessary during the process。</p>
+    </div>
+
+    <h2 class="section-heading">Background & Experience</h2>
+
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>先说一下基本信息。我之前在网页上提供的 CV 只提到了工信部<span class="corrected">信通院</span>的实习，实际上之后我还去了三峡集团，在项目上实习了两三个月，主要是检测风机故障。我在运维中心给 <span class="corrected">SCADA</span> 数据进行建模，也在风机上做了一些工作。</p>
+        <p>我的博士课题主要是去耦合 neural network 和 physics——如何用物理解释大模型，如何用人工智能赋能物理。</p>
     </div>
 
     <h2 class="section-heading">PhD Research Direction</h2>
 
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>我的博士研究主要关注一个问题：<strong>如何将神经网络与物理模型进行耦合。</strong></p>
-        <p>具体来说，就是：</p>
-        <ul>
-            <li>如何利用物理规律来解释机器学习模型</li>
-            <li>如何利用人工智能赋能物理建模</li>
-        </ul>
-        <p>其中一个核心问题是：<strong>神经网络的可解释性问题</strong>。</p>
-        <p>神经网络通常被认为是一个"黑箱"，其内部包含的权重、偏置以及神经元结构都非常抽象。很多传统物理学家对此持怀疑态度，因为这些模型缺乏明确的物理解释。</p>
-        <p>在我硕士期间（剑桥大学），我就提出希望在这个方向上开展研究。当时我的导师对人工智能其实持怀疑态度，但随着时间推移，他后来也开始大量接受 AI 相关项目，这也反映了行业发展的趋势。</p>
-        <p>我选择来到牛津读博士，也是因为这里给予我更多自由去研究这些问题。</p>
-        <p>我的研究目标主要有两个：</p>
-        <p><strong>第一，提高模型的可解释性。</strong>如果我们能够证明神经网络中的部分神经元具有明确的物理含义，那么原本的"黑箱模型"至少可以变成"灰箱模型"，从而提高工程师与科学家对模型的信任度。</p>
-        <p><strong>第二，提高模型的泛化能力。</strong>传统物理公式具有非常强的外推能力。例如牛顿第二定律 <em>F = ma</em>，只要输入不同的质量和加速度，就可以计算出力。但神经网络模型通常只能在训练数据范围内表现良好。如果训练数据中加速度范围是 10 到 100，当输入 110 时，模型往往会出现明显误差。</p>
-        <p>因此，如果我们能够将物理约束注入神经网络结构或损失函数中，就有可能显著提升模型的泛化能力。</p>
+        <p>其中一个众所周知的 neural network 的痛点就是它的 transparency。它非常 opaque，我们经常叫它是一个 black box。里面的 weights、biases、neurons 都非常 abstract。传统的物理学家对此嗤之以鼻，因为这个是不可解释的，有点像炼金术。</p>
+        <p>我在硕士期间在剑桥的时候就向导师提出要往这个方向迈进。当时我们做的一些 incompressible shock flows 以及 physics simulation 都是在往那方面靠的。有意思的是，我导师在我读硕士那一年对人工智能还非常怀疑，有点不屑。但我走后去牛津读博那一年，他开始大量接受人工智能相关项目。这就是一个大趋势。</p>
+        <p>我去牛津也是因为在这里我有更多自主性去研究我喜欢的课题。</p>
+        <p>正如我刚才所说的，neural network 里面的 weights and biases、这些神经元，它是否有一些物理含义？至少我们是否可以去解释一部分神经元的物理含义？如果可以的话，这个 black box 至少可以变成 grey box，赢得更多工程师和科学家的信任。</p>
     </div>
 
-    <h2 class="section-heading">Methodology</h2>
+    <h2 class="section-heading">Generalization & Physics Injection</h2>
 
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>我在博士期间主要研究两种方法：</p>
-        <ul>
-            <li>将物理信息注入神经网络结构</li>
-            <li>将物理约束加入损失函数（Physics Loss）</li>
-        </ul>
-        <p>传统神经网络的损失函数通常是 Data Loss。而 Physics-Informed Neural Network（PINN）会增加 Physics Loss。例如：能量守恒、动量守恒、局部残差。如果模型预测结果违反这些物理定律，则会产生较大的惩罚项。</p>
+        <p>与此同时还有一个痛点：我们很多模型只能在 training range 里 behave and perform。如果给一个没见过的 sample，它是否还能 behave？</p>
+        <p>经典物理定律适配范围非常广。比如 <em>F = ma</em>，你可以 plug any numbers in it，F 都可以给你一个结果。可是基于神经网络的模型，解释范围更小。比如用 neural net 做一个 <span class="corrected">polynomial</span> fit，你可以解释它。但当 <em>a</em> 超过训练范围（比如训练时喂的数据是 10 到 100），如果测试 <em>a</em> = 110，will it perform？这是一个很大的痛点。</p>
+        <p>我相信如果把一些物理注入进去，无论是注入到神经网络里面，还是注入到它的 loss function 里，可以帮助它的 generalization 更好。</p>
+        <p>一个是把黑变得更明，一个是把可解释性变得更广。</p>
+        <p>除此以外它的一个优势是可以作为简化算法——算得更快，也可以算得还不错的准。前期训练成本另算，但 the story is: if we train the model beforehand, 我们只需要训练一次，之后它就可以 package，卖给其他人，他们不需要重复训练，或者只需要在大模型上进行微调，训练成本就可以被忽略不计。</p>
     </div>
 
-    <h2 class="section-heading">CFD & Simulation Experience</h2>
+    <h2 class="section-heading">Methodology: Physics Loss</h2>
 
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>我的研究也涉及大量 CFD（计算流体力学）建模。例如风电场建模。</p>
-        <p>在风电场中，风机排列非常重要。前排风机会产生尾流效应（wake interaction），会降低后排风机的效率。因此在设计风电场布局时，需要考虑很多因素，例如：风速分布、空气密度、湿度、地理环境。</p>
-        <p>这本质上是一个多输入、多输出的复杂系统优化问题。</p>
-        <p>类似的问题我也在<strong>比特大陆</strong>实习时遇到过。当时我们在设计 ASIC 芯片 PCB 的散热结构，需要优化：芯片排布、散热片高度、散热片间距、导热材料。目标可能是：降低平均温度、减小温度梯度、提高算力输出。</p>
-        <p>这些问题通常涉及多变量优化。</p>
+        <p>两个模型：一个是利用 physics 注入到神经网络内部，一个是用 physics 注入到 loss function 里面。</p>
+        <p>现在 loss function 都是 data loss。一个比较新的领域就是 <strong>physics loss</strong>——你需要看模型有多符合物理定律。如果不符合 conservation of energy、conservation of momentum，如果有一些 residual of the governing equations，那它的 punishment 就很高。</p>
+        <p>所以这也是一种训练方式，in addition to data loss。</p>
     </div>
 
-    <h2 class="section-heading">Interviewer Questions</h2>
+    <h2 class="section-heading">Wind Farm & Chip Thermal Experience</h2>
+
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>这些都是我读博过程中接触到的小项目，其实更多展示的是我做 CFD、做物理建模的基本功。</p>
+        <p>比如 wind farm。一个风场可能有很多风机，风机怎么排布是有讲究的，因为前排风机会产生 wind wake interaction，会 reduce the wind efficiency afterwards。Downstream 就是我们在研究的 <strong>wake modeling</strong> 现象。就像骑车时第一个人会为后面的人挡风。但在风场里，后面的风机也想收获到最多的风，所以如何排列取决于当地的众多指标——local wind farm simulation、humidity、density of air。这是一个牵一发而动全身的复杂模拟。</p>
+        <p>这个排布问题和我两三年前在<span class="corrected">比特大陆 (Bitmain)</span> 做芯片散热时情况相同。我们在做 PC board 上堆叠芯片的排布时，要考虑散热。芯片的 matrix 是多少乘多少，上面散热片的鳍高、间距，以及中间涂的导热材料都会影响表现。这是一个多变量的复杂系统。</p>
+        <p>最终目标可能是减少总平均温度，也可能是减少温度差——不能说总温度下降了，但一边特别热一边特别冷。或者让它的算力变高。这就是一个多变量输入、多变量输出的复杂系统。</p>
+    </div>
+
+    <h2 class="section-heading">Q&A: Optimization Method</h2>
 
     <div class="turn">
         <div class="speaker interviewer-a">Interviewer A</div>
-        <p>这些问题确实是多变量输入、多变量输出。我们在工厂中也经常遇到类似问题。</p>
-        <p>我比较好奇的是：在这些场景中，您使用什么方法进行模拟或优化？神经网络在其中起到了什么作用？</p>
+        <p>你使用了什么样的方法去解决这个问题？我理解这个问题是多变量输入、多变量输出。我们面对的很多工厂场景也是这样的问题。你使用了什么方法去模拟它？或者说神经网络在中间起了什么样的作用？</p>
     </div>
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>其实问题不一定需要非常复杂的方法。</p>
-        <p>神经网络本质上可以理解为一种高维搜索方法。例如变量 A 取值 1–10，变量 B 取值 100–1000，理论上可以进行网格搜索。但当维度变高时，计算成本会迅速增加。</p>
-        <p>因此在实际操作中，我们通常会：</p>
-        <ul>
-            <li>筛选重要变量</li>
-            <li>进行敏感度分析</li>
-            <li>提高关键变量的搜索精度</li>
-        </ul>
-        <p>例如某个变量敏感度很高，我们可能从 10 个采样点增加到 100 个采样点。此外还需要结合专家经验或已有数据来缩小搜索空间。</p>
-    </div>
-    <div class="turn">
-        <div class="speaker interviewer-a">Interviewer A</div>
-        <p>那如果已经有经验公式（empirical equations），您的优化工作具体是什么？</p>
-    </div>
-    <div class="turn">
-        <div class="speaker candidate">Candidate</div>
-        <p>在我当时的项目中，主要是使用已有的经验公式进行快速计算。</p>
-        <p>完整 CFD 仿真非常昂贵，因此很多工业应用都会使用简化模型。在比特大陆的项目中，我们使用 Excel 表格，其中包含经验公式。通过输入不同参数，可以快速计算芯片温度或性能。</p>
-        <p>如果从头构建系统，则需要：</p>
-        <ul>
-            <li>建立经验公式与 CFD 仿真之间的对应关系</li>
-            <li>验证简化模型的准确性</li>
-            <li>在设计空间中进行搜索优化</li>
-        </ul>
+        <p>其实也不用那么复杂。神经网络只是一个 multi-dimensional grid search。很多变量，比如变量 A 从 1 到 10，变量 B 从 100 到 1000，我们可以暴力搜。但当 dimension 很高怎么办？就涉及到前期的取舍。</p>
+        <p>首先排除哪些变量不是重要变量，然后看哪些变量 sensitivity 很高。如果 sensitivity 很高，就在 grid search 中增加精度——比如从 1 到 10 不能只搜 10 个，而是搜 100 次，增加精度。然后根据文献或找 experts 交流、基于过去经验去进一步缩小范围。</p>
+        <p>以上本身不会涉及太多神经网络。如果完全自动化也可以，但在我两三年前做的时候没有用到。有时候我们还要考虑现实因素。比如 PC board 我想设计成 15 × 25，但不行，因为要 ship to abroad——集装箱有尺寸限制，如何装满集装箱取决于每个 PC board 的尺寸，而不仅仅是散热。</p>
+        <p>所以最终得往上汇报：到底是散热重要，还是装满集装箱 ship to abroad 重要。</p>
     </div>
 
-    <h2 class="section-heading">PhD Thesis Deep Dive</h2>
+    <h2 class="section-heading">Q&A: Modeling Approach</h2>
 
     <div class="turn">
         <div class="speaker interviewer-a">Interviewer A</div>
-        <p>我们其实更关心您博士论文中的方法。能否详细介绍一下？</p>
+        <p>我理解尺寸约束只是一个 constraint 条件。我比较好奇的是，比如对整个 PCB 板或芯片的热传导，你怎么去模拟求解？在有 constraint 的情形下怎么优化？你的优化方法是什么——就是一个 grid search 吗？</p>
     </div>
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>我的博士研究主要关注<strong>壁面函数（Wall Function）建模问题</strong>。</p>
-        <p>在 CFD 中，如果我们想提高精度，就需要大量网格点。类似于电视分辨率——像素越多，画面越清晰，但计算成本也越高。</p>
-        <p>在流体问题中，壁面附近区域最复杂：动量交换、热交换、化学反应，都发生在这一薄层区域。</p>
-        <p>为了减少计算成本，我们通常使用 Wall Function，即在某个高度选取一个网格点，并通过经验公式描述壁面以下的速度或温度分布。</p>
-        <p>但传统 wall function 有很多假设，例如：边界层处于平衡状态、流动没有分离。当出现<strong>逆压梯度（adverse pressure gradient）或流动分离</strong>时，这些假设就会失效。</p>
-        <p>我的研究提出了一种<strong>基于机器学习的通用壁面函数（Universal Wall Function）</strong>。目标是：无论几何形状、雷诺数或流动条件如何，都能适用。</p>
-        <p>实现方法包括：</p>
-        <ul>
-            <li>利用大量 CFD 数据进行训练</li>
-            <li>构建 Feature Variables（特征变量）——通常是无量纲组合，例如 y+, u+, velocity scale</li>
-        </ul>
-        <p>类似量化投资中的因子模型。这些特征变量可以放在输入层、隐藏层或输出层。</p>
-        <p>我在两篇论文中分别研究了：</p>
-        <ul>
-            <li>Feature variables 在隐藏层中的作用</li>
-            <li>Feature variables 在 loss function 中的作用</li>
-        </ul>
+        <p>Grid search 只是提供 input。最终芯片的表现或热分布取决于模型本身。模型有两套方式：一种是<strong>简化算法</strong>，一种是真正的<strong>多态物理的 CFD 全态仿真</strong>。</p>
+        <p>我两三年前在<span class="corrected">Bitmain</span> 做的是简化算法——用 Excel sheet 把 input 带入，我们有 empirical equations（经验公式）算出对应的芯片温度或算力。</p>
+        <p>如果从头来做的话，首先要搭建 empirical equations 和全仿真 CFD 之间的联系，让简化算法很好地联系 ground truth。但我当时已经站在前人的肩膀上了，有现成的 Excel sheet 可以直接 access 这些 empirical equations，所以比较快，可以支撑起快速的 grid search。</p>
     </div>
 
-    <h2 class="section-heading">Neural Network Architecture Discussion</h2>
+    <h2 class="section-heading">Q&A: Core Contribution</h2>
 
     <div class="turn">
         <div class="speaker interviewer-a">Interviewer A</div>
-        <p>您刚提到把特征变量放入 hidden layer，这个具体是如何实现的？</p>
+        <p>假设你已经有了 empirical 的 Excel 表格，那你的 optimization 工作是什么？你完成的那部分具体做了哪些内容？</p>
     </div>
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>我们首先训练一个普通神经网络。然后观察隐藏层神经元与物理变量之间的相关性。</p>
-        <p>例如：某个神经元的权重可能与某个特征变量高度相关。我们可以绘制散点图，寻找强相关关系。</p>
-        <p>当然不可能所有神经元都对应物理变量，但只要找到部分对应关系，就能让模型从 black box 变成 grey box。</p>
+        <p>除了 grid search 以外，主要还是要懂整个 process，你才能做一个 educated search。包括 wind farm 也是。但是 wind farm 完全是我自主建的。</p>
+        <p>本身那个算法可能没有那么 smart。如果要真的完全 automate 也可以。如果未来在特斯拉有这个强需求，我也可以完成全自动化。但从建模到 check empirical equations 和 CFD simulation 是否有好的相关性，到最后 take educated guess within the grid search，这本身就是我做的东西。</p>
+        <p>在实习的几个月里没有研究什么 fancy algorithm。但博士期间 fancy algorithm 是有很多的。不过在学界和业界之间有一个 gap——业界不需要太 fancy 的 algorithm，as long as it works, that's fine。但在学术上，我们要让 algorithm 看起来 as fancy as it could be。这是两个不同的 area。</p>
     </div>
 
-    <h2 class="section-heading">Data Scale Question</h2>
+    <h2 class="section-heading">Interviewer B: Dimensional Analysis</h2>
 
     <div class="turn">
         <div class="speaker interviewer-b">Interviewer B (Die-casting Expert)</div>
-        <p>您提到只用了 200 个 CFD 样本，如何保证泛化能力？</p>
+        <p>针对包括整个传热换热计算和前面 wind farm 的分析——你是不是主要用的量纲分析？把之前的一些流体和传热的偏微分方程物理离散化，后来做一些简化计算，主要是用了量纲分析来做替代？</p>
     </div>
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>这里的 200 个样本其实是 200 个 flow cases。每个 CFD 仿真包含很多 wall slices，每个 slice 都有大量数据点。因此实际训练数据量远大于 200。</p>
+        <p>对，是这样的。这是我们硕士训练的基本功——<span class="corrected">discretization</span> of continuous differential equations。比如解 <span class="corrected">Navier-Stokes equations</span>，在数学上可以成立。但如果我们离散化它，数值公式怎么表达？如果用<span class="corrected">有限元</span>或<span class="corrected">有限体积法</span>去解，可能会有 instability，会有 numerical diffusion 等问题。</p>
+        <p>这是我们硕士研究的基本功。之后我们才会接触到简化的流体模型，比如 RANS 或 LES，因为 Direct Numerical Simulation（DNS）太 expensive。</p>
+    </div>
+
+    <h2 class="section-heading">OpenFOAM Discussion</h2>
+
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>你们做流体仿真应该听说过 <span class="corrected">OpenFOAM</span> 吧？</p>
+    </div>
+    <div class="turn">
+        <div class="speaker interviewer-b">Interviewer B</div>
+        <p>我们主要用的还是类似 <span class="corrected">Fluent、FLOW-3D</span> 这些软件。</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p><span class="corrected">Fluent</span> 一个问题是它不开源，是商用的。当你的<span class="corrected">有限体积</span>超过一定数量，比如几百万，做特别复杂的仿真时就要收钱了。而且在特定情况下仿真也不是特别好。<span class="corrected">OpenFOAM</span> 是它的替代品，业界非常有名的开源代码库——是我硕士导师在他读博时建立的。</p>
+        <p>我们一直在用它。它提供一个开源的代码库，你可以在上面改，但你必须了解如何 discretize certain PDEs，这都是基本功。</p>
+    </div>
+
+    <h2 class="section-heading">Agent Projects (Brief)</h2>
+
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>陈博士您可以继续介绍您的方法，这对问题的背景大家也都了解。</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>好，那快速过一下。<span class="corrected">Paper Factory</span> 就是用不同的 agents 去 collaborate、去生产论文，但现在还在调试中，因为要冲顶刊的话还是必须有 human interaction。</p>
+        <p>然后 <span class="corrected">Proxima Auto Company</span>。这个应该最有意思——大家现在都在想如何用 AI 赚钱。如果你们关注 <span class="corrected">Claude Code</span> 的话，其实最赚钱的是教人安装它。它本身倒没赚钱。如果让 <span class="corrected">Claude Code</span> 在网上找代码任务来换赏金，但本身也没有发挥应有的效率。</p>
+        <p>我做的 auto company 是让不同的 legendary figures——比如 Jeff Bezos（这里没有 Musk）、巴菲特，甚至马云——充当不同的 agent 智能体，让他们在一轮轮讨论中从头脑风暴到验证市场到产品上线。</p>
+        <p>首期开发了七八个项目，现在 reduce to five to six。有自动发邮件的，有给人家做 CFD 简化算法的，有做功率预测的，都有。目前还没有赚钱，我们可以之后交流一些小细节。</p>
+    </div>
+
+    <h2 class="section-heading">Redirect to PhD Research</h2>
+
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>我们能不能重点集中到您博士论文和三个课题上详细介绍一下？这是我们最感兴趣的。<span class="corrected">Claude Code</span> 可能自己部门已有不少同学在用了。我们先跳过这些。</p>
+        <p>能详细介绍一下您在牛津大学的这篇博士论文——《基于机器学习的通用湍流<span class="corrected">壁面函数</span>在计算流体力学中的应用》——以及简历中写的三个课题。</p>
+    </div>
+
+    <h2 class="section-heading">PhD Thesis: Wall Function</h2>
+
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>好。我不知道你们对背景了不了解，我简要介绍一下。</p>
+    </div>
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>相关材料可以投到屏幕上吗？</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>可能现在还不太方便，等文章发出去以后可以分享。</p>
+        <p>我们说的<span class="corrected">有限元</span>去解偏微分方程，一个很直观的点是：它越精确，我们需要越多的 grid points 或 <span class="corrected">finite elements</span>、<span class="corrected">finite volume</span>。就跟看电视一样——越精细清晰，像素就越多。但像素越多就代表计算更 expensive。</p>
+        <p>所以 all we want 就是找到简化算法。在流体和固体 interact 的表层，现象是最有意思的——所有的 chemical reaction、thermal exchange、fluid exchange 都发生在这个薄表面。固态和液态、液态和气态之间的交互。这么一小层区域里需要非常多的 <span class="corrected">finite element</span>、非常多的像素才能精确表达里面的 dynamics。但话说回来，太贵了。</p>
+        <p>所以我们能不能在一个还不错的高度选一个 point，下面就没有点了、没有像素了？在这个点，我们用经验公式表达下面的交互——选一个点，根据它来表达下面的 velocity profile 或 thermal profile。这就是<strong><span class="corrected">壁面函数 (wall function)</span></strong>。</p>
+        <p>但<span class="corrected">壁面函数</span>有很多假设。比如它 rely on boundary layer equilibrium，需要底下的 boundary layer 是 well-developed。但当特定的情况发生，比如有 adverse pressure gradient、有 separation flow 的时候，假设就 broken 了，经验公式就不再成立了。</p>
+        <p>我的博士提出的新算法就是用<strong>基于机器学习的 algorithm 去 develop this universal wall function</strong>。什么叫 universal？就是无论什么情况、什么 geometry，any Reynolds number you can think of, any geometry, any flow types, whether you have adverse pressure gradient or not, whether you have coupled temperature field or chemical reactions，它都可以解释。</p>
+        <p>这就涉及到投入大量训练数据。你不能只给它某一种 flow field 的数据，because then it doesn't generalize。你需要做非常精确的<strong>特征编码 (feature encoding)</strong>。</p>
+    </div>
+
+    <h2 class="section-heading">Feature Variables</h2>
+
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>Feature variables 是什么？就是很多 non-dimensionalized combinations of physical variables。比如我们经常涉及到的 y⁺ 或 u⁺，或者 velocity scaled by friction velocity——它是不同物理量的组合。</p>
+        <p>就像我们做量化项目的时候，基于因子来判断：把不同 variables 组合成一个因子，然后预测未来因子。这个就是物理学里的因子。我叫它 <strong>feature variables</strong>（特征物理量）。</p>
+        <p>特征物理量可以放在三个地方：可以作为 input layers，可以作为 hidden layers，也可以作为 output layers。</p>
+        <p>我两篇博士课题的 paper 分别 investigate 把 feature variables 放在 hidden layers 的 neurons 里面，以及把 feature variables 放在 output layers 作为 loss functions，它对整个 model 的帮助是多少。</p>
+    </div>
+
+    <h2 class="section-heading">Paper 1: Physics-Constrained Loss Function</h2>
+
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>第一条是：开发了一种物理约束的损失函数的前馈神经网络，用于拟合分离边界层中的<span class="corrected">近壁速度</span>分布，通过二维扩散器和高保真模拟验证，结果显示较高的一致性和可扩展性。</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>对，就是我刚才所说的——把 feature variables 放在 output layers、input layers 或 hidden layers，它对整个 model performance 是多少。</p>
+        <p>我们有几个 metrics。一个是 accuracy：在 normal attached flow condition 下和 conventional wall function 相比做得很不错。在 flow separation 发生的情况下又怎么样？因为 conventional wall function cannot perform in flow separation——如果 our wall function can perform during flow separation, that's a big breakthrough。</p>
+    </div>
+
+    <h2 class="section-heading">Q&A: How Feature Variables Enter Hidden Layers</h2>
+
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>你把特征因子放到了 hidden layer 或 output layer。这个东西怎么放进去的？因为我感觉 feature 应该是靠数据自己学出来的，尤其 hidden layer。这是加了一个类似 <span class="corrected">ResNet</span> 的通道吗？还是什么方式？</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>其实没有那么复杂。一开始纯用 neural net——MLP-based，only one single hidden layer for the velocity profile section。</p>
+    </div>
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>一层输入层，一层隐藏层，一层输出层——就是一个三层的 MLP？</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>对——不是说一定是这样的，但 for the sake of transparency：层数多了物理量就解释不清楚了，只有一层的情况下物理量才能解释清楚。</p>
+    </div>
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>你有多大规模参数的 MLP？</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>不一定。比如在最新的论文里，有 4、3、8 和 16 neurons in the hidden layer。neurons 个数其实对应的是特定物理场景下流的分层。</p>
+        <p>比如壁面附近分三层：viscous sublayer、log-law layer 和 outer region。我们知道神经网络是叠加的——一个 neuron 是一个 shape，三个叠加在一起，分别对应三个不同的物理层。It doesn't have to be three neurons, we can have 8 or 16 neurons. But for the sake of simplicity 和可解释性，我们选择 3、8、16。</p>
+        <p>我也做过更多层和更多 neurons 的 <span class="corrected">hyperparameter</span> study。但最后发现层数多了没有太大帮助，反而会让模型 overfit。</p>
+    </div>
+
+    <h2 class="section-heading">Q&A: Correlation with Physics</h2>
+
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>但神经网络所有的 hidden layer 都是靠 back propagation 训练出来的。你把物理的因子直接灌到 hidden layer 里，这是一种什么方式？</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>其实是找 correlation。比如训练 back propagation 之后，其中一个 neuron 它的 weight 是 8。那我们就可以去找 which feature variable has the best linear correlation with this neuron。不可能是完美的强线性相关——它是一个 scattered plot，但有一些会呈很好的强相关关系。</p>
+    </div>
+    <div class="turn">
+        <div class="speaker interviewer-a">Interviewer A</div>
+        <p>我感觉做 data 或做视觉的话，可能我们需要找到 latent space，然后 latent value 可能代表某些特征。你给我解释的是：神经网络其实跟物理参数有直接的相关性——每个 neuron 对应到物理的某个变量。</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>尽量。不是所有都可以对应的——就是我刚才说的 black box 和 grey box。Grey box is better than black box。我们不可能把所有物理量都 map 上去、都找到相关性。找到一些，我觉得就不错了。至少 it's a breakthrough。</p>
+    </div>
+
+    <h2 class="section-heading">Interviewer B: Numerical Methods</h2>
+
+    <div class="turn">
+        <div class="speaker interviewer-b">Interviewer B</div>
+        <p>关于您博士课题，第一个有说到<span class="corrected">近壁速度</span>分布。您整个分析建立的偏微分方程，是基于<span class="corrected">有限体积法</span>来进行分析的吗？</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>你说 CFD 吗？</p>
+    </div>
+    <div class="turn">
+        <div class="speaker interviewer-b">Interviewer B</div>
+        <p>对，CFD，包括你在验证和做偏微分方程约束的时候。</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p><span class="corrected">有限体积法</span>或者<span class="corrected">有限元</span>，两个都可以。</p>
+        <p>补充一下：<span class="corrected">有限元</span>更适用于没有 sharp discontinuity 的流体场景。<span class="corrected">有限体积法</span>更适合有 shock waves 这种 discontinuous 的情况，因为它 by its nature conserve the conservation of mass and momentum。取决于流体的情况，可以用不同的方法。</p>
+        <p>这都是基于 Eulerian 体系。我们也可以做 Lagrangian 的——我本科时候做过 SPH（Smoothed Particle Hydrodynamics），基于 Lagrangian coordinate 做的 dam break。不同方法都可以，取决于需求和场景。</p>
+    </div>
+
+    <h2 class="section-heading">Q&A: Dimensionless Numbers & Feature Variables</h2>
+
+    <div class="turn">
+        <div class="speaker interviewer-b">Interviewer B</div>
+        <p>我想问的是，分析的是<span class="corrected">瞬态</span>还是稳态？包括如果有强压力梯度或分离流，传统的 y⁺ 或 u⁺ 两个<span class="corrected">无量纲数</span>如果不足以描述这种流动状态，在你的学习模型里面，是继续在现有框架上打补丁，还是引入新的<span class="corrected">无量纲数</span>群和物理特征？</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>两个大问题，一个一个回答。</p>
+        <p><strong>第一：<span class="corrected">瞬态</span>还是稳态？</strong>其实都 OK，取决于我们用 RANS、LES 还是其他算法，取决于 geometry。</p>
+        <p>比如一个 diffuser——就是一个渐扩的通道，流会在底下形成 <span class="corrected">vortex</span>，majority of the flow would come out of this area。这是一个比较低 slope 的 diffuser。</p>
+        <p>如果是 backward-facing step（一个台阶），那 <span class="corrected">vortex</span> 就会非常多，要 reach 所谓的 steady-state 是不太可能的——你只能取得一个 statistical stability（统计学意义上的 stability）。最终取决于我们有多长时间、花多少数据能解决问题。Both works。</p>
+        <p><strong>第二：<span class="corrected">无量纲数</span>够不够？</strong>一开始我们会有无限多的<span class="corrected">无量纲数</span>——所有我们能想到的全都放进去了。y⁺、u⁺、<span class="corrected">雷诺数</span>，这些都是通过大量文献阅读生成的。ChatGPT、<span class="corrected">Claude</span> 最擅长这些事——生成很多<span class="corrected">无量纲数</span>的组合。</p>
+        <p>但你把它们喂进去做进一步分析后——for example, good old <span class="corrected">PCA</span>——你会发现很多 feature variables 是一个东西。比如 y⁺ 和 y⁺ 除以某个 viscous length scale，它只是前面加一个系数，在我们的训练条件下那个系数不变，那不就是同一个 feature variable 嘛。</p>
+        <p>所以回答您的问题：我们<strong>不是</strong>从少的<span class="corrected">无量纲数</span>池子里去解释模型、不行再加。而是一开始就有一堆——all possible feature variables，所有<span class="corrected">无量纲数</span>都在池子里，然后逐渐减少。这是和您说的正好相反。</p>
+    </div>
+
+    <h2 class="section-heading">Data Scale & Generalization</h2>
+
+    <div class="turn">
+        <div class="speaker interviewer-b">Interviewer B</div>
+        <p>你仅用 200 个 CFD 样本就基本完成了泛化能力。你也说了可以适应任何流态和任何 geometry，但不同 geometry 的<span class="corrected">无量纲数</span>可能不一样，包括不同流的<span class="corrected">雷诺数</span>、摩擦系数、普朗特数等都不一样。200 个 CFD 样本你这边一般是怎么分布的？跟前期设置的网格或单元体数量和分布有没有关系？</p>
+    </div>
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>我先回答一下您可能觉得 200 个比较少的顾虑——其实不少。为什么？因为这是 200 个不同的 geometry，有不同的 inlet velocity、不同的 boundary condition。</p>
+        <p>但实际上并不少。因为我们提取的数据是<span class="corrected">近壁</span>面的数据，而<span class="corrected">近壁</span>面是 one slice, one slice, many slices。一个 CFD geometry 可能有 hundreds of slices，每个 slice 都有很多数据。</p>
+        <p>So to answer your question: it's not technically 200 data points, but 200 geometries, 200 flow conditions. 具体的数据比这个多得多。具体多少我得回去看一下。</p>
+    </div>
+
+    <h2 class="section-heading">Reynolds Number Extrapolation</h2>
+
+    <div class="turn">
+        <div class="speaker candidate">Candidate</div>
+        <p>我想说的是关于<span class="corrected">雷诺数</span>等参数的外推——我觉得最大的顾虑就是超出训练范围。</p>
+        <p>比如<span class="corrected">雷诺数</span>训练的是 1,000 到 10,000，超出它怎么办？这就是我们研究的内容。如果训练 1,000 到 10,000，它在 100,000、200,000 都能做，那就神了。如果能 push it beyond 10,000——push out of the boundary for 10%——那我觉得不错。Push out 20%，更好。它是有一个度的。</p>
+        <p>退一步来说，即使是牛顿——我们这个剑桥老学长——他提出的 <em>F = ma</em>、能量守恒、质量守恒，也不是适用于所有场景。曾经有几百年我们觉得牛顿三律可以解释一切的经典力学，但后来发现在极小尺度下，you have to use quantum mechanics。经典力学的公式在 quantum world 里失灵了。</p>
+        <p>所以我并不是追求一个解决一切的大模型，也不是说靠 200 个 CFD simulation 就可以解释所有<span class="corrected">雷诺数</span>和所有流态。但 will try——will push the boundary, five percent, ten percent, twenty percent。这就是我在做的事情。</p>
     </div>
 
     <h2 class="section-heading">Closing</h2>
 
     <div class="turn">
         <div class="speaker interviewer-a">Interviewer A</div>
-        <p>时间差不多了。您还有什么想问的吗？</p>
+        <p>时间差不多了，看您有没有什么想问的。</p>
     </div>
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>我一直非常欣赏特斯拉这家公司，也非常希望有机会加入团队学习。希望未来能够与各位合作。</p>
+        <p>时间差不多了，但我觉得去特斯拉还是学习。特别崇拜特斯拉，觉得它非常厉害的一个公司。希望在被 AI 卷下去之前先挣几年钱——开玩笑的。希望和二位学习和合作。</p>
     </div>
     <div class="turn">
         <div class="speaker interviewer-a">Interviewer A</div>
-        <p>好的，我们会尽快和 HR 沟通，之后给您反馈。</p>
+        <p>好的，没问题。我们会尽快联系 HR，给您通知后续。谢谢。</p>
     </div>
     <div class="turn">
         <div class="speaker candidate">Candidate</div>
-        <p>好的，谢谢。</p>
+        <p>好，再见。谢谢。</p>
     </div>
 
     <!-- ==================== PERFORMANCE REVIEW ==================== -->
@@ -356,30 +551,42 @@
     <div class="review">
         <h2>Interview Performance Review</h2>
 
-        <h3><span class="grade grade-green">Strong</span> Technical Depth</h3>
-        <p>The candidate demonstrated solid command of their PhD topic (physics-informed neural networks for wall functions). The explanation of black-box vs. grey-box models was clear and well-structured, and the F = ma analogy for extrapolation was effective for a non-specialist audience. The wall function explanation using the "TV resolution" analogy showed good science communication instincts.</p>
+        <h3><span class="grade grade-green">Strong</span> Technical Depth on PhD Research</h3>
+        <p>The candidate demonstrated genuine command of their PhD topic (physics-informed neural networks for universal wall functions). The explanation of how feature variables are injected into hidden layers and loss functions was clear. The key insight — that individual neurons can be correlated with physical quantities to move from black-box to grey-box — was well articulated. The "TV resolution" analogy for mesh refinement and the Newton/quantum mechanics analogy for extrapolation limits were effective for a cross-disciplinary audience.</p>
 
-        <h3><span class="grade grade-green">Strong</span> Breadth of Experience</h3>
-        <p>Successfully conveyed a wide range of relevant experience: CFD, multi-agent LLM systems, wind farm modeling, chip thermal optimization at Bitmain, SCADA fault detection at Three Gorges. This breadth aligns well with Tesla's multi-disciplinary needs.</p>
+        <h3><span class="grade grade-green">Strong</span> Preparation & Breadth</h3>
+        <p>Having a prepared PPT showed initiative. The candidate demonstrated experience across CFD, multi-agent LLM systems, wind farm modeling, chip thermal optimization (Bitmain), SCADA fault detection (Three Gorges), and quantitative trading. This breadth aligns with the multi-disciplinary "AI Native Scientist" role.</p>
 
-        <h3><span class="grade grade-green">Strong</span> Preparation</h3>
-        <p>Having a prepared presentation (PPT) showed initiative and professionalism. Most candidates in technical interviews do not prepare slides, so this stood out positively.</p>
+        <h3><span class="grade grade-green">Strong</span> Data Scale Clarification</h3>
+        <p>When challenged on "only 200 samples", the candidate effectively explained these are 200 geometries × hundreds of wall slices each — the actual data volume is orders of magnitude larger. Concise and convincing rebuttal.</p>
 
         <h3><span class="grade grade-yellow">Mixed</span> Answering Directness</h3>
-        <p>When asked "what method do you use to simulate/optimize?", the candidate gave a general answer about grid search and sensitivity analysis rather than naming specific algorithms or frameworks (e.g., Bayesian optimization, surrogate models, genetic algorithms). The interviewer had to redirect twice ("we're more interested in your PhD methods") before getting a focused answer. In industry interviews, leading with the most specific and impressive answer is critical.</p>
+        <p>The candidate struggled when asked directly about their optimization method. When Interviewer A asked "what method did you use?", the answer drifted through grid search, sensitivity analysis, and a tangent about container shipping constraints. The interviewer had to redirect <strong>three times</strong> ("what is your optimization method?", "what did you actually do?", "can we focus on your PhD?") before getting a focused answer. In industry interviews, leading with the most specific and impressive answer is critical. The core wall function contribution should have been the opening, not something extracted after 15 minutes of follow-up questions.</p>
 
         <h3><span class="grade grade-yellow">Mixed</span> Connecting to Tesla's Needs</h3>
-        <p>The candidate acknowledged the die-casting relevance ("related to my Master's work") but did not elaborate or draw explicit parallels. Given that the interviewer spent significant time explaining die-casting defects and factory digitization, a stronger candidate would have immediately mapped their CFD/ML experience onto Tesla's specific problems: thermal simulation of molten aluminum flow, defect prediction via sensor data, process parameter optimization.</p>
+        <p>The candidate acknowledged the die-casting relevance ("related to my Master's work") but never elaborated or drew explicit parallels. Given that the interviewer spent significant time explaining die-casting defects and the digital factory — and this was described as the best-matching area — a stronger candidate would have immediately mapped their CFD/ML experience onto Tesla's specific problems: thermal simulation of molten aluminum flow, defect prediction, process parameter optimization using physics-informed models.</p>
 
-        <h3><span class="grade grade-yellow">Mixed</span> Agent Systems Not Showcased</h3>
-        <p>The candidate briefly name-dropped Paper Factory, Proxima Auto Company, and AIDER but did not explain them — despite these being arguably the most differentiating parts of their profile for an "AI Native Scientist" role. The PPT contained detailed slides on these topics, but the conversation was steered entirely toward CFD/physics before reaching them.</p>
+        <h3><span class="grade grade-yellow">Mixed</span> Agent Projects Under-Showcased</h3>
+        <p>Paper Factory, Proxima Auto Company, Quant, and AIDER were briefly name-dropped but not explained before the interviewer redirected to the PhD thesis. These are arguably the most differentiating parts of the profile for an "AI Native Scientist" role. Notably, the interviewer's dismissal ("Claude Code — our department already has people using it, let's skip this") suggests the candidate did not frame these projects in a way that conveyed technical depth or unique value.</p>
 
-        <h3><span class="grade grade-green">Adequate</span> Data Scale Clarification</h3>
-        <p>When challenged on "only 200 CFD samples", the candidate correctly clarified that 200 flow cases contain thousands of wall profiles each. This was a concise and effective rebuttal.</p>
+        <h3><span class="grade grade-red">Weak</span> Industry vs. Academia Comment</h3>
+        <p>The remark "in industry you don't need fancy algorithms, as long as it works that's fine — but in academia we have to make the algorithm look as fancy as possible" may have been intended as self-aware humor, but risks coming across as dismissive of industrial innovation. Tesla's engineering culture prizes sophisticated solutions. The closing joke about "earning money before AI takes over" similarly walks a thin line.</p>
+
+        <h3><span class="grade grade-green">Adequate</span> Numerical Methods Fluency</h3>
+        <p>The exchange with Interviewer B about FVM vs. FEM, Eulerian vs. Lagrangian, RANS/LES/DNS, and OpenFOAM vs. Fluent demonstrated solid fundamentals. The candidate navigated these questions comfortably and showed genuine expertise in the toolchain.</p>
 
         <h3>Overall Assessment</h3>
-        <p>The candidate presented as a technically capable researcher with genuine depth in physics-informed ML and CFD. The main gaps were: (1) not aggressively connecting their skills to Tesla's stated factory problems, and (2) under-selling the LLM agent systems that make the profile uniquely relevant to the "AI Native Scientist" title. The closing was warm but generic — a stronger close would reference a specific Tesla challenge and how they'd approach it.</p>
-        <p style="margin-top:12px;"><strong>Likely outcome:</strong> Advance to next round, but the candidate should prepare to (a) articulate a concrete plan for applying their skills to die-casting/factory optimization, and (b) lead with the agent systems story, which is the strongest differentiator.</p>
+        <p>The candidate has strong technical depth in physics-informed ML and CFD, with a breadth of experience that fits the role. The main gaps were:</p>
+        <ul>
+            <li>Not connecting their skills to Tesla's stated die-casting and factory problems</li>
+            <li>Taking too long to reach the core PhD contribution — the interviewers had to extract it</li>
+            <li>Under-selling the LLM agent systems that would differentiate the profile</li>
+            <li>A few tone-deaf moments (industry vs. academia comment, closing joke)</li>
+        </ul>
+
+        <h3>Prediction</h3>
+        <p><strong>Likely outcome: ~55% chance of advancing to next round.</strong></p>
+        <p>The technical substance is there, but the interview pacing and communication issues may hurt. The interviewers seemed mildly frustrated by the indirect answers (three redirects), and the die-casting expert's questions were answered competently but without connecting back to Tesla's needs. If advancing, the candidate should prepare to: (a) articulate a concrete 90-day plan for applying physics-informed ML to die-casting defect prediction, (b) lead with the wall function contribution in the first 2 minutes, and (c) frame the agent systems work as directly relevant to Tesla's factory automation goals rather than as side projects.</p>
     </div>
 </div>
 
